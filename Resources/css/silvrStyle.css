@@ -4,6 +4,7 @@ background: rgb(255,255,255);
 background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(0,0,0,1) 8%, rgba(215,215,215,1) 9%, rgba(255,255,255,1) 100%);  overflow: hidden;
 }
 
+
 /* Style the links inside the navigation bar */
 .topnav a {
   float: left;
@@ -71,10 +72,12 @@ h2 {
   display: block; /* Make the links appear below each other */
   padding: 12px; /* Add some padding */
   text-decoration: none; /* Remove underline from links */
+  font-weight: bold;
 }
 
 .linkMenu a:hover {
-  background-color: #eee; /* Dark grey background on mouse-over */
+  border-left: 2px solid black;
+
 }
 
 .linkMenu a.active {
