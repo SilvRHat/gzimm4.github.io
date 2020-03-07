@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140660137-2"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-140660137-2');
+	</script>
 	<title>Profile</title>
 	
 	<link rel="stylesheet" href="../Resources/css/silvrStyle.css">
@@ -25,7 +33,7 @@
 				<p style=" font-size: 20px;">	Full time student, artist, and game designer pursuing a CS major and music minor. Self taught in programming from 6th grade with a passion to develop. Currently seeking the opportunity to hone and expand my skills working with an innovative team specialized in various aspects of engineering, computer science, networking, and design. </p>
 				<div class="linkMenu">
 					<a style="font-size: 20px;" href="https://www.linkedin.com/in/gavin-zimmerman-2b4214185/"
-					onclick="ga(’send’,’event’,’Links’,’LinkedIn’,’onClick’,1);">LinkedIn</a>
+					onclick="gtag(‘event’,’LinkedIn’, {‘event_category’ : ‘Links’,‘event_label’ : ‘onClick’‘value’ : 1});">LinkedIn</a>
 					<a style="font-size: 20px;" href="https://github.com/gzimm4"
 					onclick="ga(’send’,’event’,’Links’,’Github’,’onClick’,1);">Github</a>
 				</div>
