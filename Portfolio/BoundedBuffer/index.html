@@ -1,0 +1,168 @@
+<!-- Gavin Zimmerman
+Portfolio and About Me 
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PORTFOLIO - Bounded Buffer</title>
+	<link rel="stylesheet" href="../../Resources/style.css">
+	<link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet'>
+</head>
+<body>
+	<div class="top">
+		<div class="topnav">
+			<div class="buttons">
+				<a href="../../">ABOUT ME</a>
+				<a class="active" href="../">PORTFOLIO</a>
+				<a href="../../Contact">CONTACT</a>
+			</div>
+		</div>
+		<div id="navfade"></div>
+	</div>
+	
+	<h5 style="
+	margin-left: 12.5%;
+	top:6vw;
+	position: relative;">Bounded Buffer</h5>
+	
+	<div class="main_content" style="
+	top: 6vw;
+	position: relative;">  
+		<div>
+			<div class="subbar">
+				<a id="about_button" class="subactive">About</a>
+				<a id="code_button">Source Code</a>
+				<a href="../" style="float: right;">Back</a>
+			</div>
+			<div id="subfade"></div>
+		</div>
+		
+		<div id="about" class="viewing">
+			<div class="topic" style="margin-top:0;">
+				<h4>OCT 2020<br>C | pthread & semaphores libraries</h4>
+				
+				<h3>Exposition</h3><br>
+				<p class="reg_desc">
+					The bounded buffer problem faces managing shared memory between multiple threads in a safe manner. This project is a solution to project assignment 3 for Operating Systems at University of Colorado, Boulder.
+				</p>
+			</div>
+			
+			<div class="topic" style="margin-top:0;">
+				<h3>Goal</h3><br>
+				<p class="reg_desc">
+					Design a multi-threaded application, written in C, which resolves host names to corresponding IP addresses. The application should implement two classes of threads, requesters and resolvers. Requester threads will read hostnames from a number of input files and place each hostname in a shared array of limited size (the bounded buffer). Resolver threads will take hostnames from the shared array and perform a DNS lookup and write to an output file.
+				</p>
+			</div>
+			
+			<div class="topic" style="margin-top:0;">
+				<h3>Man Page</h3>
+				<div class="code_block">
+					NAME<br>
+					<br>
+					multi-lookup - resolve a set of hostnames to IP addresses<br>
+					<br>
+					SYNOPSIS<br>
+					<br>
+					multi-lookup &lt;# requester> &lt;# resolver> &lt;requester log> &lt;resolver log> [ &lt;data file> ... ]<br>
+					<br>
+					DESCRIPTION<br>
+					<br>
+					The file names specified by &lt;data file> are passed to the pool of requester threads which place information into a shared data area. Resolver threads read the shared data area and find the corresponding IP address.<br>
+					<br>
+					<# requesters> number of requestor threads to place into the thread pool.<br>
+					<br>
+					<# resolvers> number of resolver threads to place into the thread pool.<br>
+					<br>
+					&lt;requester log> name of the file into which all the requester status information is written.<br>
+					<br>
+					&lt;resolver log> name of the file into which all the resolver status information is written.<br>
+					<br>
+					&lt;data file> filename to be processed. Each file contains a list of host names, one per line, that are to be resolved.<br>
+				</div>
+			</div>
+			
+			<div class="topic" style="margin-top:0;">
+				<h3>Constraints</h3><br>
+				<div class="reg_desc" style="margin-top: -12px">
+					<ul>
+						<li>Bounded buffer size - 20 Elements</li>
+						<li>Cannot use pre-existing thread-safe queue or file io libraries</li>
+						<li>Built with “-Wall” and “-Wextra” producing no errors or warnings</li>
+						<li>Run with leaking no memory</li>
+						<li>Cannot use global variables for worker threads</li>
+						<li>Synchronization and Deadlock - Program should synchronize 3 shared resources avoiding deadlock and busy waiting.</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+		<div id="source_code">
+			<div class="topic" style="margin-top:0;">
+				<h3>Source Code</h3><br>
+				<p class="reg_desc">
+					I've open-sourced this project on GitHub. The files may also be downloaded here.<br><br>
+					Git Repo: <a href="https://github.com/gzimm4/Multithreaded-Bounded-Buffer">Multithreaded-Bounded-Buffer</a><br>
+					Source: <a href="../../Resources/Code/BoundedBuffer.zip" download>BoundedBuffer.zip</a>
+				</p>
+				<div class="code_block">
+					git clone https://github.com/gzimm4/Multithreaded-Bounded-Buffer
+				</div>
+			</div>
+			
+			<div class="topic" style="margin-top:0;">
+				<h3>README</h3><br>
+				<div class="code_block" style="font-family: default;">
+					Gavin Zimmerman<br>
+					Project Assignment 3 - Multithreading<br>
+					<br>
+					Files<br>
+					multi-lookup.c  -  Main program source code. Main function is structured to set up environment to run program with dynamic input. Main then creates threads to service and resolve hostnames in given files.<br>
+					multi-lookup.h  -  Header for main source code. Contains libararies, data structures, and macros to be used in multi-lookup.c.<br>
+					util.c  -  Source code for dns lookup functionality.<br>
+					util.h  -  Header for util.h<br>
+					Makefile  -  Makefile to build program with required libaries, flags, and source files. <br>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<script type="text/javascript">
+		var topic_map = {"code_button":"source_code", "about_button":"about"};
+		var current_button = document.getElementsByClassName("subactive")[0];
+		var current_topic = document.getElementsByClassName("viewing")[0];
+		
+		for (let button in topic_map) {
+			let topic = document.getElementById(topic_map[button]);
+			button = document.getElementById(button);
+			
+			if (topic!=current_topic) {
+				topic.style="visibility:hidden; position: fixed;";
+			};
+			button.onclick=(function (){
+				current_topic.style="visibility:hidden; position: fixed;";
+				current_button.classList.remove("subactive");
+				
+				current_topic=topic;
+				current_button=button;
+				
+				current_topic.style="";
+				current_button.classList.add("subactive");
+			})
+		};
+		
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

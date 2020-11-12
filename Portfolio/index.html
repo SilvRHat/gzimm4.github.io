@@ -5,7 +5,7 @@ Portfolio and About Me
 <!DOCTYPE html>
 <html>
 <head>
-	<title>PROJECTS</title>
+	<title>PORTFOLIO</title>
 	<link rel="stylesheet" href="../Resources/style.css">
 	<link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet'>
 </head>
@@ -13,28 +13,31 @@ Portfolio and About Me
 	<div class="top">
 		<div class="topnav">
 			<div class="buttons">
-				<a class="nonactive" href="../">ABOUT ME</a>
-				<a class="active" href="/">PORTFOLIO</a>
-				<a class="nonactive" href="../Contact">PROFESSIONAL</a>
+				<a href="../">ABOUT ME</a>
+				<a class="active" href="#">PORTFOLIO</a>
+				<a href="../Contact">CONTACT</a>
 			</div>
 		</div>
-		<div class="navfade"></div>
+		<div id="navfade"></div>
 	</div>
-	<p class="note">[NOTE] I'm currently building web pages for each project to contain full description, performance, timeline, and code. I expect to have all pages up by Nov. 10th. Thanks :)</p>
+	
 	
 	<div class="page_title">
 		<h1>Projects</h1>
 		<h2 style="padding-left: 40px;">Active</h2>
 	</div>
 	<div class="main_content" style="margin-top: 1.4vw;">
-		<div class="page_item">
+		
+		<div class="page_item" onmouseover="">
 			<h3>Down Water</h3>
 			<h4>JUL 2020 - Present; Projected Release: MAY 2021<br>
 			Lua | Python | Blender</h4>
 			<p class="reg_desc">
 				Strategic team-based multiplayer game driving game objectives through an interactive and dynamic map. Exploring stylized methods of gameplay with a large set of skills and abilities.
 			</p>
+			
 		</div>
+		
 		
 		<div class="page_item">
 			<h3>Remote Network Tool/ Lua Parser</h3>
@@ -47,7 +50,7 @@ Portfolio and About Me
 	</div>
 	
 	<div class="page_title">
-		<h2 style="padding-left: 20px;">Completed</h2>
+		<h2 style="padding-left: 20px;">Published</h2>
 	</div>
 	<div class="main_content" style="margin-top: 1.4vw;">
 		<div class="page_item">
@@ -57,6 +60,8 @@ Portfolio and About Me
 			<p class="reg_desc">
 				Funky pizza-making game where 4 players compete for the top score on constructing outrageous styles of pizza. Designed and programmed systems in data saving, character controls, animation, interactive equipment, and user interface and feedback. Done as a collaboration project in spare time over summer break.
 			</p>
+			<br>
+			<a class="proj_page" href="Diced/">View</a>
 		</div>
 		
 		<div class="page_item">
@@ -65,9 +70,9 @@ Portfolio and About Me
 			Python | pycurl</h4>
 			<p class="reg_desc">
 				Program done to complete a CTF targeted at a vulnerable AES-CBC implementation. Has two primary functions, decrypting an encrypted text without a key using minimal network requests, and recrypt altered text to allow SQLi attack models. Practiced with HackerOne’s program in ethical hacking.
-				<br><br>
-				<a href="https://github.com/gzimm4/Cyber-Security-1/blob/master/encryptAttack.py">Source Code</a>
 			</p>
+			<br>
+			<a class="proj_page" href="PaddingOracle/">View</a>
 		</div>
 		
 		<div class="page_item">
@@ -76,9 +81,9 @@ Portfolio and About Me
 			C | pthread & semaphores libraries	</h4>
 			<p class="reg_desc">
 				C executable program to approach the bounded buffer problem in multithreading. Implemented with pthreads library and made safe with binary and counting semaphores. Carefully tested with valgrind and gcc wall flag to ensure no memory leakage or warnings. Completed as part of a CU course on operating systems.
-				<br><br>
-				<a href="https://github.com/gzimm4/Multithreaded-Bounded-Buffer">Source Code - Directory and README Description</a>
 			</p>
+			<br>
+			<a class="proj_page" href="BoundedBuffer/">View</a>
 			
 		</div>
 	</div>

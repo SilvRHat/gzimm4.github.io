@@ -1,13 +1,157 @@
+<!-- Gavin Zimmerman
+Portfolio and About Me 
+-->
+
 <!DOCTYPE html>
 <html>
 <head>
-	<title>PORTFOLIO</title>
+	<title>PORTFOLIO - Diced</title>
+	<link rel="stylesheet" href="../../Resources/style.css">
+	<link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet'>
 </head>
 <body>
-	<!-- This page will be up soon. Thanks-->
-	<script>
-		window.location.href = "../";
+	<div class="top">
+		<div class="topnav">
+			<div class="buttons">
+				<a href="../../">ABOUT ME</a>
+				<a class="active" href="../">PORTFOLIO</a>
+				<a href="../../">CONTACT</a>
+			</div>
+		</div>
+		<div id="navfade"></div>
+	</div>
+	
+	<h5 style="
+	margin-left: 12.5%;
+	top:6vw;
+	position: relative;">Diced</h5>
+	
+	<div class="main_content" style="
+	top: 6vw;
+	position: relative;">  
+		<div>
+			<div class="subbar">
+				<a id="about_button" class="subactive">About</a>
+				<a id="code_button">Code Samples</a>
+				<a href="../" style="float: right;">Back</a>
+			</div>
+			<div id="subfade"></div>
+		</div>
+		
+		<div id="about" class="viewing">
+			<div class="topic" style="margin-top:0;">
+				<h4>MAR 2020 - JUL 2020<br> Lua | Roblox Studio & API</h4>
+				<h3>Game Description</h3><br>
+				
+				<p class="reg_desc">
+					A stylized pizza-making game where 4 players compete for the top score on constructing outrageous pizzas. Players battle in kitchens equipped with stand mixers, cutting boards, stovetops, and a grand pizza oven.  Every round a kitchen, theme, and recipe are chosen. Submissions are scored on dough ratios, correct toppings, cooking job, and hidden bonuses. Claiming wins, players can refine their knife skills, speed, and chef-know-how. 
+					<br><br>
+					Supported on: PC, Tablet, and Mobile<br>
+					Powered by Roblox
+				</p>
+			</div>
+			
+			<div class="topic" style="margin-top:0;">
+				<h3>Development</h3><br>
+				<p class="reg_desc">
+					Plated Studios (Startup)<br>
+					&nbsp;&nbsp;Loertis - Lead game designer / Map creation / UI design<br>
+					&nbsp;&nbsp;Gavin Z. - Systems and gameplay programming / Animation<br>
+					<br>
+					Alpha Release: Published July 10th 2020<br>
+					Plays: +1000
+				</p>
+			</div>
+		</div>
+		
+		<div id="source_code">
+			<div class="topic" style="margin-top:0;">
+				<h3>Environment</h3>
+				<br>
+				<p class="reg_desc">
+					All source code is written in Lua on Roblox’s Platform. <br>
+					Scripts are placed in a world hierarchy tree which contains all objects used to build the game. Scripts can be run either on client or server with differing permissions, and use remote signals to communicate over network traffic. Programmed completely in the context of Roblox objects and corresponding <a href="https://developer.roblox.com/en-us/api-reference">API</a> methods.
+				</p>
+			</div>
+			
+			<div class="topic" style="margin-top:0;">
+				<h3>Structure</h3><br>
+				<p class="reg_desc">
+					Provided are significant scripts which directly guide gameplay. Client scripts typically monitor user input, provide immediate feedback, and signal server to validate and carry out completely. Server scripts are split into various roles and communicate data through signaled functions.
+				</p>
+				<div class="code_block">
+					Main [SERVER SIDED]<br>
+					Operates gameplay cycle and game state. Cycles through setup, intermission, game round, round results and rewards.<br>
+					 &nbsp;&nbsp;Setup - Selects map and recipe module to play. Loads these into world.<br>
+					 &nbsp;&nbsp;Intermission - Brief sleep to introduce round conditions to players<br>
+					 &nbsp;&nbsp;Game round - Activates gameplay scripts and movement. Waits for all submissions or round time to reach 0. Deactivates gameplay scripts and movement.<br>
+					 &nbsp;&nbsp;Rewards - Scores each submission. Teleports losing player to lobby server. Rewards points to submissions and a bonus to winner.<br>
+					 <br>
+					 Linked with: UI_main, Store<br>
+					 <br><br>
+					 
+					Store [SERVER SIDED]<br>
+					Handles player data and product purchases. Enables player data to persist across game sessions. Enables a daily bonus rewarding extra points for consecutive days a player visits game. Manages upgrade purchases and purchasable content, verifying purchase are valid and fulfilled.<br>
+					<br>
+					Linked with: Main, UI_main<br>
+					<br><br>
+					
+					Recipe Module [MODULE | PARALLEL] (x12)<br>
+					Operates gameplay systems adjusted towards a specific recipe.
+					&nbsp;&nbsp;Client Side - Prompts player when interactions can be made. Sends signal to server on input 'E'. Some interactions require a key be pressed, where progress is displayed to user and communicated with server on early cancels.<br>
+					&nbsp;&nbsp;Server Side - Verifies and performs interactions, manipulating 3D environment in process. Communicates with Main, specifying most current scores and submission entries.
+					<br><br>
+					Required from: Main, UI_main
+					
+					Appearance [SERVER SIDED]<br>
+					Manages minor details in game appearance. Customizes characters in a chef avatar, designating premium players with red chat text and red clothing. <br>
+					<br><br>
+					
+					UI_main [CLIENT SIDED]<br>
+					Implements entire User interface. Signaled from main, UI main communicates game state with player, round details, and round results. Allows user to interact with a shop, a tutorial, and current selected recipe.<br>
+					<br>
+					Communicates with: Main, Store
+				</div>
+			</div>
+			
+			<div class="topic" style="margin-top:0;">
+				<h3>Source Code</h3><br>
+				<p class="reg_desc">
+					I've open-sourced some sample code from this project. I believe the scripts written show good programming practices and are a useful resource for intern applications. I also think they can be good to study for those interested in game making on Roblox.<br><br>
+					Git Repo: <a href="https://github.com/gzimm4/Diced-Source-Code-Samples">Diced Code Samples</a><br>
+					Source: <a href="../../Resources/Code/Diced_Code_Samps.zip" download>Diced_Code_Samps.zip</a>
+				</p>
+				<div class="code_block">
+					git clone https://github.com/gzimm4/Diced-Source-Code-Samples
+				</div>
+			</div>
+		</div>
+		
+	</div>
+	
+	<script type="text/javascript">
+		var topic_map = {"about_button":"about","code_button":"source_code"};
+		var current_button = document.getElementsByClassName("subactive")[0];
+		var current_topic = document.getElementsByClassName("viewing")[0];
+		
+		for (let button in topic_map) {
+			let topic = document.getElementById(topic_map[button]);
+			button = document.getElementById(button);
+			
+			if (topic!=current_topic) {
+				topic.style="visibility:hidden; position: fixed;";
+			};
+			button.onclick=(function (){
+				current_topic.style="visibility:hidden; position: fixed;";
+				current_button.classList.remove("subactive");
+				
+				current_topic=topic;
+				current_button=button;
+				
+				current_topic.style="";
+				current_button.classList.add("subactive");
+			})
+		};
 	</script>
-
 </body>
 </html>
