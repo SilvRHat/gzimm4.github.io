@@ -1,12 +1,105 @@
+/* CSS SilvrShip Profile Style
+Gavin Zimmerman
+*/
 
-/* About Page*/
 
-.title {
-	margin-left: 18.15%;
-	margin-top: 220px;
+
+body {
+	margin: 0;
+	background: url("imgs/Background.png") no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
 
-h1 {
+/*Navbar*/
+.top {
+	width:100%;
+	position: fixed;
+	top:0px;
+	z-index:10;
+	
+}
+
+.topnav {
+	height: 48px;
+    position: relative;
+    background: rgb(20,20,20);
+}
+
+.topnav .buttons {
+	margin: auto;
+	width: max-content;	
+}
+
+.topnav a {
+	display: inline-block;
+	padding: 10px 22px;
+	text-align: center;
+	text-decoration: none;
+	
+	color: white;
+	padding: 0% auto;
+	font-size: 22px;
+    font-family: Calibri;
+}
+
+.topnav a:not(.active):hover {
+	background-color: rgb(40,40,40);
+}
+
+.topnav a.active {
+	background-color: rgb(60,60,60);
+}
+
+#navfade {
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(7, 59, 75, .6)), to(rgba(0, 0, 0, 0)));
+	height: 8px;
+	width: 100%;
+}
+
+
+.subbar {
+	height: 48px;
+    position: relative;
+    background: rgba(255,255,255,.8);
+}
+
+.subbar .buttons {
+	margin: auto;
+	width: max-content;	
+}
+
+.subbar a {
+	display: inline-block;
+	padding: 11px 22px;
+	text-align: center;
+	text-decoration: none;
+	
+	color: black;
+	padding: 0% auto;
+	font-size: 22px;
+    font-family: Calibri;
+}
+
+.subbar a:not(.subactive):hover {
+	background-color: rgba(210,210,210,.6);
+}
+
+.subbar a.subactive {
+	background-color:rgba(190,190,190,.6);
+}
+
+#subfade {
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(7, 59, 75, .2)), to(rgba(0, 0, 0, 0)));
+	height: 8px;
+	width: 100%;
+}
+
+/*Text Styling*/
+
+h1 { /*Page Main*/
 	color: white;
 	font-size: 7vw;
 	font-family: Merriweather;
@@ -14,7 +107,7 @@ h1 {
 	text-shadow: 0px 0px 10px #3a849aab;
 	margin: 0px;
 }
-h2 {
+h2 { /*Page Sub*/
 	color: white;
 	font-size: 3.2vw;
 	font-family: Merriweather;
@@ -23,7 +116,7 @@ h2 {
 	margin: -10px 0px 0px 8px;
 }
 
-h3 {
+h3 { /* Flag text */
 	display: inline-block;
 	font-family: Merriweather;
 	font-size: 24px;
@@ -34,20 +127,25 @@ h3 {
 	text-align: center;
 }
 
-.about_para {
-	display: inline-block;
-	float: left;
-	width: 60%;
-	margin: 12px 6%;
+h4 { 
+	margin: 24px 16px;
+	margin-bottom: 0px;
 	font-size: larger;
+	float: right;
+	text-align: right;
+	padding: 5px 0px;
 }
 
-.prof_pic {
-	height: auto;
-	width: 22%;
-	float: left;
-	
+h5 { 
+	color: white;
+	font-size: 5.6vw;
+	font-family: Merriweather;
+	font-weight: 300;
+	text-shadow: 0px 0px 10px #3a849aab;
+	margin: 0px;
+	width: 82%;
 }
+
 
 .reg_desc {
 	display: inline-block;
@@ -56,6 +154,61 @@ h3 {
 	margin: 12px 6%;
 	font-size: larger;
 }
+
+
+/* Blocks */
+.main_content {
+	width: 63.7%;
+	max-width: 860px;
+	margin: auto;
+	margin-bottom: 80px;
+	background-color: rgba(255,255,255, .7);
+}
+
+.topic {
+	width: 100%;
+	margin: 16px 0px;
+	display: inline-block;
+}
+
+.note { /* Note at top of page*/
+	width: 90%;
+	padding: 0px 5%;
+	background-color: rgba(255,255,255,.8);
+	font-size: 22px;
+	text-align: center;
+	position: relative;
+	top: 45px;
+}
+.code_block {
+	font-family: Courier New;
+	font-size: medium;
+	width: 80%;
+	margin:0 10%;
+	padding:12px;
+	background-color: rgba(255,255,255,.8);
+	display:inline-block;
+}
+
+
+
+
+
+/* ABOUT ME */
+#prof_pic {
+	height: auto;
+	width: 22%;
+	float: left;
+}
+
+#about_para {
+	display: inline-block;
+	float: left;
+	width: 60%;
+	margin: 12px 6%;
+	font-size: larger;
+}
+
 .skills {
 	width: 86%;
 	margin: auto;
@@ -71,6 +224,12 @@ h3 {
 	width: 45%;
 	margin: 0% 2.5%;
 	float: left;
+}
+
+.title {
+	margin-left: 18.15%;
+	top: 22vw;
+	position: absolute;
 }
 
 .background_title {
@@ -91,163 +250,112 @@ h3 {
 }
 
 
-.main_content {
-	width: 63.7%;
-	max-width: 860px;
-	margin: auto;
-	margin-bottom: 80px;
-	background-color: rgba(255,255,255, .64);
-}
-
-.topic {
-	width: 100%;
-	margin: 16px 0px;
-	display: inline-block;
-}
 
 
+/* Portfolio */
 .page_title {
 	width: 80%;
 	margin: auto;
 	top:40px;
 	position:relative;
+	text-decoration: inherit;
 }
 .page_item {
 	width: 100%;
 	margin: 16px 0px;
 	display: inline-block;
+	text-decoration: inherit;
 }
-h4 {
-	margin: 24px 16px;
-	margin-bottom: 0px;
-	font-size: larger;
-	float: right;
-	text-align: right;
-	padding: 5px 0px;
+.project_link {
+	text-decoration: none;
+	width: 100%;
+	height: 100%;
+	z-index: 20;
 }
-
-.note {
-	width: 90%;
-	padding: 0px 5%;
-	background-color: rgba(255,255,255,.8);
-	font-size: 22px;
+.project_link :hover {
+	background-color: rgb(40,40,40,.2);
+}
+.proj_page {
+	display: inline-block;
+	margin:auto;
+	width:max-content;
+	background-color: rgba(255,255,255,1);
+	text-decoration: none;
+	color:black;
+	font-size: 24px;
 	text-align: center;
+	padding: 8px 24px;
+	position: relative;
+	left: 75%;
+	box-shadow: 2px 5px 5px #3d7c942e;
+}
+.proj_page:hover {
+	background-color: rgba(255,255,255,.6);
 }
 
 
 
 
 
+
+
+/* Contact */
 
 .business_card {
-	width: 500px;
-	height: 250px;
+	width: 480px;
+	height: 260px;
+	
+	position: absolute;
 	top: 30%;
-	left: calc(50% - 250px);
-	position: absolute;
-	background-color: rgba(255,255,255,.88);
-	background-image: url(imgs/CoverImage.JPG);
-    background-blend-mode: overlay;
-    background-size: cover;
-}
-
-.card_name {
-	font-family: Merriweather;
-	font-size: 42px;
-	position: absolute;
-	top: 40%;
-	margin: 0;
-	text-align: center;
-	width: 100%;
-}
-.card_text {
-	font-family: Merriweather;
-	font-size: 24px;
-	position: absolute;
-	top: 60%;
-	margin: 0;
-	text-align: center;
-	width: 100%;
-}
-.card_info {
-	font-family: Merriweather;
-	font-size: larger;
-	position: absolute;
-	top: 80%;
-	margin: 0;
-	width: 100%;
-}
-.card_info a{
-	font-color: black;
-	width: max-content;
-	float: left;
-	width: 40%;
-	margin-left: 10%;
-	text-align: center;
-}
-.card_info p{
-	font-color: black;
-	width: max-content;
-	float: left;
-	width: 40%;
-	margin-right: 10%;
-	text-align: center;
-	margin: 0px;
-}
-
-/* Navigation bar */
-.top {
-	position: sticky;
-	top:0px;
-	z-index:10;
-}
-
-.topnav {
-  background: rgb(20,20,20);
-  height: 48px;
-  position: relative;
-}
-
-.topnav .buttons {
-	margin: auto;
-	width: max-content;
+	left: calc(50% - 240px);
 	
+	background-color: rgba(255,255,255,.92);
+	box-shadow:2px 5px 5px rgb(39 66 88 / 42%);
+	text-align: center;
+	
+    font-family: Merriweather;
 }
 
-.topnav a {
-	display: inline-block;
-	padding: 10px 22px;
-	text-align: center;
-	text-decoration: none;
-	
-	color: white;
-	padding: 0% auto;
+#card_name {
+	font-size: 36px;
+	position: absolute;
+	top: 26%;
+	margin:0;
+	height:55px;
+}
+
+#card_company {
+	font-size: 16px;
+	position: absolute;
+	top: 58%;
+	margin:0;
+}
+
+#card_specialty {
 	font-size: 22px;
-    font-family: Calibri;
+	position: absolute;
+	top: 45%;
+	margin:0;
 }
 
-.navfade {
-	background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(7, 59, 75, .6)), to(rgba(0, 0, 0, 0)));
-	height: 8px;
+#card_linkedin {
+	position: absolute;
+	bottom: 0%;
+	left:0%;
+}
+#card_email {
+	position: absolute;
+	bottom: 0%;
+	right:0%;
+}
+
+.card_contact {
+	font-size: 16px;
+	width: max-content;
+	margin:10px;
+	color: black;
+}
+
+.card_center {
 	width: 100%;
-}
-
-.topnav a.nonactive:hover {
-	background-color: rgb(40,40,40);
-}
-
-.topnav a.active {
-	background-color: rgb(60,60,60);
-}
-
-/* END Nav bar*/
-
-
-body {
-	margin: 0;
-	background: url("imgs/Background.png") no-repeat center center fixed;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
 }
