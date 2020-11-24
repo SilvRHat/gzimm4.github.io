@@ -1,13 +1,222 @@
+<!--Gavin Zimmerman
+Portfolio-->
+
 <!DOCTYPE html>
 <html>
 <head>
 	<title>PORTFOLIO</title>
+	
+	<!-- Resources -->
+	<link rel="stylesheet" href="../../Resources/style3.css">
+	<link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet'>
+	<script src="../../Resources/webcode.js"></script>
 </head>
 <body>
-	<!-- This page will be up soon. Thanks-->
-	<script>
-		window.location.href = "../";
-	</script>
-
+	<div class="top">
+		<div class="topnav">
+			<div class="buttons">
+				<a href="../../">ABOUT ME</a>
+				<a class="active" href="../">PORTFOLIO</a>
+				<a href="../../Contact">CONTACT</a>
+			</div>
+		</div>
+		<div id="navfade"></div>
+	</div>
+	
+	<h5 style="
+	margin-left: 12.5%;
+	top:6vw;
+	position: relative;">Down Water</h5>
+	
+	<div class="main_content" style="
+	top: 6vw;
+	position: relative;">
+		<div>
+			<div class="subbar">
+				<a id="about_b" class="subactive">About</a>
+				<!--<a id="design_b">Tech Design</a>-->
+				<a id="timeline_b">Timeline</a>
+				<a href="../" style="float: right;">Back</a>
+			</div>
+			<div id="subfade"></div>
+		</div>
+		
+		<div id="about" class="viewing">
+			<div class="topic">
+				<h4>JUL 2020 - CURRENT<br>
+				Lua | python</h4>
+				<h3>Setting</h3><br>
+				<p class="reg_text">
+					Times are troubling in this steampunk-esc era where tech advances simply can’t keep up with resource supply. This has brought about the new trade of a scraper bounty hunter, those who master in salvaging highly-prized materials. These scrapers operate in 3 person teams and are masters social engineering. However, their goal is highly competitive and often requires trickery on other teams. Play with your friends as a scraper team, search the map for clues, and uncover valuable artifacts before anyone else.
+				</p>
+			</div>	
+			
+			<div class="topic">
+				<h3>Why</h3><br>
+				<p class="reg_text">
+					Game design is how I kick back and enjoy the moment. I brew coffee, queue up whatever music I'm into that week, and go at it for hours. This project I'm especially passionate about and have been thinking of for over a year. <br>
+					<br>
+					I've taken this on as a solo project and am directly working on every aspect of the game from level design to UI/ UX to programming. However, I'm using this as an opportunity to connect with various developers skilled in various disciplines and better learn their processes. 
+				</p>
+			</div>
+			
+			<div class="topic">
+				<h3>Development</h3><br>
+				<div class="reg_text">
+					Developer: SilvrShip Studios<br>
+					<br>
+					Additional Thanks:
+					<ul>
+						<li>Jan Stec - Lead Game Designer; consulted for input on character verbs and maintaining fairness in multiplayer setting.</li>
+						<li>Eric Wustrow - Professor at CU; consulted for help on HMAC model for verifying server integrity.</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+		<div id="design">
+			
+		</div>
+		
+		<div id="timeline">
+			<div class="topic">
+				<h3>Seamap</h3><br>
+				<p class='reg_text'>
+					Here I've broken up various development goals over the span of a few months. <br>
+					Many of which are closed beta, meaning they have been developed and prototyped, but do not have an environment yet to be implemented. These are more of tools for later goals.
+				</p>
+			</div>
+			<div class="topic">
+				<h3>October</h3>
+				<table class="roadmap">
+					<tr>
+						<td class="goal">NPC Network System
+							<p>Builds a graph of nodes which represent npcs, shifts nodes around map to simulate a day. Can then build a game map with scattered clues and npc permutations.</p>
+						</td>
+						<td class="status">Closed Beta</td>
+					</tr>
+					<tr>
+						<td class="goal">Lua HMAC | Python HMAC Auth
+							<p>Client-Server scripts to verify HTTP Requests made on behalf of Down Water.</p>
+						</td>
+						<td class="status">Closed Beta</td>
+					</tr>
+					
+				</table>
+			</div>
+			<div class="topic">
+				<h3>November</h3>
+				<table class="roadmap">
+					<tr>
+						<td class="goal">NPC characters and personalities - Tier 1
+							<p>Interactable npcs which guide gameplay through clues.</p>
+						</td>
+						<td class="status">Live</td>
+					</tr>
+					
+					<tr>
+						<td class="goal">Cross-Server Communication System
+							<p>System to communicate between servers on game state</p>
+						</td>
+						<td class="status">Closed Beta</td>
+					</tr>
+					
+					<tr>
+						<td class="goal">Player Data and Statistics
+							<p>Script to manage player data and materials. Will link with endpoints</p>
+						</td>
+						<td class="status">On Track</td>
+					</tr>
+					
+				</table>
+			</div>
+			<div class="topic">
+				<h3>December</h3>
+				<table class="roadmap">
+					<tr>
+						<td class="goal">Web Endpoints and Database
+							<p>Accessible and documented web endpoints to implement HMAC and maintain data and statistics</p>
+						</td>
+						<td class="status">On track</td>
+					</tr>
+					<tr>
+						<td class="goal"> Map (1/5)- Shipyard
+							<p>Complete map build for lobby and fraction of full map.</p>
+						</td>
+						<td class="status">On Track</td>
+					</tr>
+					<tr>
+						<td class="goal">Tier 1 Tools (~15)
+							<p>Content to allow players different abilities which may assist various gameplay objectives.</p>
+						</td>
+						<td class="status">Concept Phase</td>
+					</tr>
+					<tr>
+						<td class="goal">Game cycle
+							<p>Prototype of a gameplay cycle which implements NPC network system and </p>
+						</td>
+						<td class="status">Concept Phase</td>
+					</tr>
+					<tr>
+						<td class="goal">Design Server Grouping and Teleportation System
+							<p>Semantics to implement multiple server allocation for larger maps.</p>
+						</td>
+						<td class="status">Conept Phase</td>
+					</tr>
+				</table>
+			</div>
+			<div class="topic">
+				<h3>January</h3>
+				<table class="roadmap">
+					<tr>
+						<td class="goal">Pilot Prototype
+							<p>Playable prototype implementing portion of map and content.</p>
+						</td>
+						<td class="status">On Track</td>
+					</tr>
+					<tr>
+						<td class="goal">Player Immersive Events
+							<p>Implement background cultural features on server using real-time. Ex. Fly Hot Air Ballons on Fridays, Sport Games on Saturdays, etc.</p>
+						</td>
+						<td class="status">Early Concept Phase</td>
+					</tr>
+					
+				</table>
+			</div>
+			<div class="topic">
+				<h3>February</h3>
+				<table class="roadmap">
+					<tr>
+						<td class="goal">Map (2/5) - City
+							<p>Complete map build for lobby and fraction of full map.</p>
+						</td>
+						<td class="status">Early Concept Phase</td>
+					</tr>
+					<tr>
+						<td class="goal">Tier 2 Tools
+							<p>Content to allow players different abilities which may assist various gameplay objectives.</p>
+						</td>
+						<td class="status">Early Concept Phase</td>
+					</tr>
+				</table>
+			</div>
+			<div class="topic">
+				<h3>March</h3>
+				<table class="roadmap">
+					<tr>
+						<td class="goal">Tier 2 - Prototype
+							<p>Playable prototype including tier 2 content (map and items)</p>
+						</td>
+						<td class="status">On Track</td>
+					</tr>
+					
+				</table>
+			</div>
+		</div>
+		
+	</div>
+	<script type="text/javascript">
+		map(["about","timeline"])
+	</script>>
 </body>
 </html>

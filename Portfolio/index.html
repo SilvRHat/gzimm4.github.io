@@ -1,13 +1,15 @@
-<!-- Gavin Zimmerman
-Portfolio and About Me 
--->
+<!--Gavin Zimmerman
+Portfolio-->
 
 <!DOCTYPE html>
 <html>
 <head>
 	<title>PORTFOLIO</title>
-	<link rel="stylesheet" href="../Resources/stylev2.css">
+	
+	<!-- Resources -->
+	<link rel="stylesheet" href="../Resources/style3.css">
 	<link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet'>
+	<script src="../Resources/webcode.js"></script>
 </head>
 <body>
 	<div class="top">
@@ -21,74 +23,108 @@ Portfolio and About Me
 		<div id="navfade"></div>
 	</div>
 	
+	<h5 style="
+	margin-left: 12.5%;
+	top:6vw;
+	position: relative;">Code Reel & Portfolio</h5>
 	
-	<div class="page_title">
-		<h1>Projects</h1>
-		<h2 style="padding-left: 40px;">Active</h2>
-	</div>
-	<div class="main_content" style="margin-top: 1.4vw;">
-		
-		<div class="page_item" onmouseover="">
-			<h3>Down Water</h3>
-			<h4>JUL 2020 - Present; Projected Release: MAY 2021<br>
-			Lua | Python | Blender</h4>
-			<p class="reg_desc">
-				Strategic team-based multiplayer game driving game objectives through an interactive and dynamic map. Exploring stylized methods of gameplay with a large set of skills and abilities.
-			</p>
-			<br>
-			<a class="proj_page" href="#">Coming soon</a>
+	<div class="main_content" style="
+	top: 6vw;
+	position: relative;">
+		<div>
+			<div class="subbar">
+				<a id="active_b">Active</a>
+				<a id="publish_b" class="subactive">Published</a>
+				<a id="info_b" style="float: right;">Info</a>
+			</div>
+			<div id="subfade"></div>
 		</div>
 		
-		
-		<div class="page_item">
-			<h3>Remote Network Tool/ Lua Parser</h3>
-			<h4>OCT 2020 - Present<br>
-			Lua</h4>
-			<p class="reg_desc">
-				Development tool to non-intrusively monitor internal networking calls between server and client with Roblox Studio. Includes features for testing forged signals over network, reaction time, and performance.
-			</p>
-			<br>
-			<a class="proj_page" href="#">Coming soon</a>
-		</div>
-	</div>
-	
-	<div class="page_title">
-		<h2 style="padding-left: 20px;">Published</h2>
-	</div>
-	<div class="main_content" style="margin-top: 1.4vw;">
-		<div class="page_item">
-			<h3>Diced- Competitive Cooking Sim Game</h3>
-			<h4>MAR 2020 - JUL 2020<br>
-			Lua | Roblox Studio</h4>
-			<p class="reg_desc">
-				Funky pizza-making game where 4 players compete for the top score on constructing outrageous styles of pizza. Designed and programmed systems in data saving, character controls, animation, interactive equipment, and user interface and feedback. Done as a collaboration project in spare time over summer break.
-			</p>
-			<br>
-			<a class="proj_page" href="Diced/">View</a>
+		<div id="active">
+			<div class="page_item">
+				<h4>JUL 2020 - CURRENT<br>
+				Lua | python</h4>
+				<h3>Down Water</h3><br>
+				
+				<p class="reg_desc">
+					Strategic team-based multiplayer game driving game objectives through an interactive and dynamic map. Exploring stylized methods of gameplay with a large set of skills and abilities.
+				</p>
+				<br>
+				<a class="proj_page" href="DownWater">View</a>
+			</div>
 		</div>
 		
-		<div class="page_item">
-			<h3>Automated Padding Oracle Decrypter</h3>
-			<h4>May 2020 - June 2020<br>
-			Python | pycurl</h4>
-			<p class="reg_desc">
-				Program done to complete a CTF targeted at a vulnerable AES-CBC implementation. Has two primary functions, decrypting an encrypted text without a key using minimal network requests, and recrypt altered text to allow SQLi attack models. Practiced with HackerOne’s program in ethical hacking.
-			</p>
-			<br>
-			<a class="proj_page" href="PaddingOracle/">View</a>
+		<div id="publish" class="viewing">
+			<div class="page_item">
+				<h4>MAR 2020 - JUL 2020<br>
+				Lua | Roblox Studio</h4>
+				<h3>Diced- Competitive Cooking Sim Game</h3><br>
+				
+				<p class="reg_desc">
+					Funky pizza-making game where 4 players compete for the top score on constructing outrageous styles of pizza. Designed and implemented systems in data saving, character controls, animation, interactive equipment, and user interface and feedback. Done in collaboration with other early developers on Roblox.
+				</p>
+				<br>
+				<a class="proj_page" href="Diced">View</a>
+			</div>
+			
+			<div class="page_item">
+				<h4>May 2020 - June 2020<br>
+				Python | pycurl</h4>
+				<h3>Automated Padding Oracle Decrypter</h3><br>
+				
+				<p class="reg_desc">
+					Program done to complete a CTF targeted at a vulnerable AES-CBC implementation. Has two primary functions, decrypting an encrypted text without a key using minimal network requests, and recrypt altered text to allow SQLi attack models. Practiced with HackerOne’s program in ethical hacking.
+				</p>
+				<br>
+				<a class="proj_page" href="PaddingOracle">View</a>
+			</div>
+			
+			<div class="page_item">
+				<h4>Oct 2020<br>
+				C | pthread & semaphores libraries	</h4>
+				<h3>Multithreaded Bounded-Buffer Hostname Resolver</h3><br>
+				
+				<p class="reg_desc">
+					C executable program to approach the bounded buffer problem in multithreading. Implemented with pthreads library and made safe with binary and counting semaphores. Carefully tested with valgrind and gcc wall flag to ensure no memory leakage or warnings. Completed as part of a CU course on operating systems.
+				</p>
+				<br>
+				<a class="proj_page" href="BoundedBuffer">View</a>
+				
+			</div>
 		</div>
 		
-		<div class="page_item">
-			<h3>Multithreaded Bounded-Buffer Hostname Resolver</h3>
-			<h4>Oct 2020<br>
-			C | pthread & semaphores libraries	</h4>
-			<p class="reg_desc">
-				C executable program to approach the bounded buffer problem in multithreading. Implemented with pthreads library and made safe with binary and counting semaphores. Carefully tested with valgrind and gcc wall flag to ensure no memory leakage or warnings. Completed as part of a CU course on operating systems.
-			</p>
-			<br>
-			<a class="proj_page" href="BoundedBuffer/">View</a>
+		<div id="info">
+			<div class="topic">
+				<h3>Synopsis</h3><br>
+				<p class="reg_text">
+					I've composed this 'code reel' to demonstrate myself as a professional programmer. I value open-sourcing, so naturally the work mentioned here is available for reviewing, using, and modifying for free. All work here, unless explicitly stated, is completely authored and designed by myself. Feel free to get in touch, I'm happy to recieve any input/ comments and answer any questions.<br><br>
+					RECRUITERS: Please also feel free to reach out if you'd like additional code samples to review myself as an applicant.
+				</p>
+			</div>
+			
+			<div class="topic">
+				<h3>Selection</h3><br>
+				<p class="reg_text">
+					All projects shown here fall within the last half year. The majority are un-related to school or work; and instead showcase my personal interests. <br><br>
+					The 'active' section is composed of projects which I may have a few or no code samples on. These will showcase my design process and an allocated timeline. And I'd be happy to talk about these projects as I'm really excited about them.
+				</p>
+			</div>
+			
+			<div class="topic">
+				<h3>Updates</h3><br>
+				<div class="reg_text">
+					I'm actively updating my portfolio and publish updates about once a week.<br>
+					This week I plan on adding:<br>
+					<ul>
+						<li>Gameplay videos</li>
+					</ul>
+				</div>
+			</div>
 			
 		</div>
 	</div>
+	<script type="text/javascript">
+		map(["active","publish","info"])
+	</script>>
 </body>
 </html>

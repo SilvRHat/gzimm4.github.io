@@ -1,0 +1,397 @@
+/* CSS SilvrShip Profile Style
+Gavin Zimmerman
+*/
+
+
+
+body {
+	margin: 0;
+	background: url("imgs/Background.png") no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+/*Navbar*/
+.top {
+	width:100%;
+	position: fixed;
+	top:0px;
+	z-index:10;
+	
+}
+
+.topnav {
+	height: 48px;
+    position: relative;
+    background: rgb(20,20,20);
+}
+
+.topnav .buttons {
+	margin: auto;
+	width: max-content;	
+}
+
+.topnav a {
+	display: inline-block;
+	padding: 10px 22px;
+	text-align: center;
+	text-decoration: none;
+	
+	color: white;
+	padding: 0% auto;
+	font-size: 22px;
+    font-family: Calibri;
+}
+
+.topnav a:not(.active):hover {
+	background-color: rgb(40,40,40);
+}
+
+.topnav a.active {
+	background-color: rgb(60,60,60);
+}
+
+#navfade {
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(7, 59, 75, .6)), to(rgba(0, 0, 0, 0)));
+	height: 8px;
+	width: 100%;
+}
+
+
+.subbar {
+	height: 48px;
+    position: relative;
+    background: rgba(255,255,255,.8);
+}
+
+.subbar .buttons {
+	margin: auto;
+	width: max-content;	
+}
+
+.subbar a {
+	display: inline-block;
+	padding: 11px 22px;
+	text-align: center;
+	text-decoration: none;
+	
+	color: black;
+	padding: 0% auto;
+	font-size: 22px;
+    font-family: Calibri;
+}
+
+.subbar a:not(.subactive):hover {
+	background-color: rgba(210,210,210,.6);
+}
+
+.subbar a.subactive {
+	background-color:rgba(190,190,190,.6);
+}
+
+#subfade {
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(7, 59, 75, .2)), to(rgba(0, 0, 0, 0)));
+	height: 8px;
+	width: 100%;
+}
+
+/*Text Styling*/
+
+h1 { /*Page Main*/
+	color: white;
+	font-size: 7vw;
+	font-family: Merriweather;
+	font-weight: 300;
+	text-shadow: 0px 0px 10px #3a849aab;
+	margin: 0px;
+}
+h2 { /*Page Sub*/
+	color: white;
+	font-size: 3.2vw;
+	font-family: Merriweather;
+	font-weight: 300;
+	text-shadow: 0px 0px 3px #3a849aab;
+	margin: -10px 0px 0px 8px;
+}
+
+h3 { /* Flag text */
+	display: inline-block;
+	font-family: Merriweather;
+	font-size: 24px;
+	font-weight: 100;
+	width: 30%;
+	padding: 3px 0px;
+	background-color: rgba(255,255,255, 1);
+	text-align: center;
+}
+
+h4 { 
+	margin: 24px 16px;
+	margin-bottom: 0px;
+	font-size: larger;
+	float: right;
+	text-align: right;
+	padding: 5px 0px;
+}
+
+h5 { 
+	color: white;
+	font-size: 5.6vw;
+	font-family: Merriweather;
+	font-weight: 300;
+	text-shadow: 0px 0px 10px #3a849aab;
+	margin: 0px;
+	width: 82%;
+}
+
+
+.reg_desc {
+	display: inline-block;
+	float: left;
+	width: auto;
+	margin: 12px 6%;
+	font-size: larger;
+}
+.reg_text {
+	display: inline-block;
+	float: left;
+	width: auto;
+	margin: 12px 6%;
+	font-size: larger;
+}
+
+
+/* Blocks */
+.main_content {
+	width: 63.7%;
+	max-width: 860px;
+	margin: auto;
+	margin-bottom: 180px;
+	background-color: rgba(255,255,255, .7);
+}
+
+.topic {
+	width: 100%;
+	margin: 0 0 16px 0;
+	display: inline-block;
+}
+
+
+.roadmap {
+	width: 90%;
+	margin: 10px 5%;
+	font-size: larger;
+}
+.roadmap .goal {
+	text-align: left;
+	padding: 10px;
+	padding-left: 20px;
+}
+.roadmap .goal p {
+	font-size: medium;
+	margin:0px;
+}
+.roadmap .status {
+	text-align: center;
+	width: 20%;
+}
+
+.roadmap tr:nth-child(even) {
+	background-color: rgba(255,255,255,.5);
+}
+.roadmap tr:nth-child(odd) {
+	background-color: rgba(255,255,255,1);
+}
+
+
+
+.note { /* Note at top of page*/
+	width: 90%;
+	padding: 0px 5%;
+	background-color: rgba(255,255,255,.8);
+	font-size: 22px;
+	text-align: center;
+	position: relative;
+	top: 45px;
+}
+.code_block {
+	font-family: Courier New;
+	font-size: medium;
+	width: 80%;
+	margin:0 10%;
+	padding:12px;
+	background-color: rgba(255,255,255,.8);
+	display:inline-block;
+}
+
+
+
+
+
+/* ABOUT ME */
+#prof_pic {
+	height: auto;
+	width: 22%;
+	float: left;
+}
+
+#about_para {
+	display: inline-block;
+	float: left;
+	width: 60%;
+	margin: 12px 6%;
+	font-size: larger;
+}
+
+.skills {
+	width: 86%;
+	margin: auto;
+}
+.skills_box {
+	background-color: rgba(255,255,255,.7);
+	font-size: larger;
+	margin: 0px;
+	padding: 12px;
+}
+.skills_div {
+	float:left;
+	width: 45%;
+	margin: 0% 2.5%;
+	float: left;
+}
+
+.title {
+	margin-left: 18.15%;
+	top: 22vw;
+	position: absolute;
+}
+
+.background_title {
+	font-size: x-large;
+	width:94%;
+	margin: auto;
+	text-align: center;
+	background-color: rgba(255,255,255,.7);
+	padding: 6px;
+	display: flex;
+	margin-top:12px;
+}
+
+.background_item {
+	width: 100%;
+	margin-bottom:20px;
+	display: inline-block;
+}
+
+
+
+
+/* Portfolio */
+.page_title {
+	width: 80%;
+	margin: auto;
+	top:40px;
+	position:relative;
+	text-decoration: inherit;
+}
+.page_item {
+	width: 100%;
+	margin: 16px 0px;
+	display: inline-block;
+	text-decoration: inherit;
+}
+.project_link {
+	text-decoration: none;
+	width: 100%;
+	height: 100%;
+	z-index: 20;
+}
+.project_link :hover {
+	background-color: rgb(40,40,40,.2);
+}
+.proj_page {
+	display: inline-block;
+	margin:auto;
+	width:max-content;
+	background-color: rgba(255,255,255,1);
+	text-decoration: none;
+	color:black;
+	font-size: 24px;
+	text-align: center;
+	padding: 8px 24px;
+	position: relative;
+	left: 75%;
+	box-shadow: 2px 5px 5px #3d7c942e;
+}
+.proj_page:hover {
+	background-color: rgba(255,255,255,.6);
+}
+
+
+
+
+
+
+
+/* Contact */
+
+.business_card {
+	width: 480px;
+	height: 260px;
+	
+	position: absolute;
+	top: 30%;
+	left: calc(50% - 240px);
+	
+	background-color: rgba(255,255,255,.92);
+	box-shadow:2px 5px 5px rgb(39 66 88 / 42%);
+	text-align: center;
+	
+    font-family: Merriweather;
+}
+
+#card_name {
+	font-size: 36px;
+	position: absolute;
+	top: 26%;
+	margin:0;
+	height:55px;
+}
+
+#card_company {
+	font-size: 16px;
+	position: absolute;
+	top: 58%;
+	margin:0;
+}
+
+#card_specialty {
+	font-size: 22px;
+	position: absolute;
+	top: 45%;
+	margin:0;
+}
+
+#card_linkedin {
+	position: absolute;
+	bottom: 0%;
+	left:0%;
+}
+#card_email {
+	position: absolute;
+	bottom: 0%;
+	right:0%;
+}
+
+.card_contact {
+	font-size: 16px;
+	width: max-content;
+	margin:10px;
+	color: black;
+}
+
+.card_center {
+	width: 100%;
+}
