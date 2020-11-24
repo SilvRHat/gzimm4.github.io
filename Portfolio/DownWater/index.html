@@ -4,14 +4,15 @@ Portfolio-->
 <!DOCTYPE html>
 <html>
 <head>
-	<title>PORTFOLIO</title>
+	<title>Down Water</title>
 	
 	<!-- Resources -->
-	<link rel="stylesheet" href="../../Resources/style3.css">
+	<link rel="stylesheet" href="../../Resources/style4.css">
 	<link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet'>
 	<script src="../../Resources/webcode.js"></script>
 </head>
 <body>
+	<div id="backdrop"></div>
 	<div class="top">
 		<div class="topnav">
 			<div class="buttons">
@@ -29,8 +30,7 @@ Portfolio-->
 	position: relative;">Down Water</h5>
 	
 	<div class="main_content" style="
-	top: 6vw;
-	position: relative;">
+	margin-top: 6vw;">
 		<div>
 			<div class="subbar">
 				<a id="about_b" class="subactive">About</a>
@@ -44,21 +44,12 @@ Portfolio-->
 		<div id="about" class="viewing">
 			<div class="topic">
 				<h4>JUL 2020 - CURRENT<br>
-				Lua | python</h4>
+				Lua | python | Blender</h4>
 				<h3>Setting</h3><br>
 				<p class="reg_text">
 					Times are troubling in this steampunk-esc era where tech advances simply can’t keep up with resource supply. This has brought about the new trade of a scraper bounty hunter, those who master in salvaging highly-prized materials. These scrapers operate in 3 person teams and are masters social engineering. However, their goal is highly competitive and often requires trickery on other teams. Play with your friends as a scraper team, search the map for clues, and uncover valuable artifacts before anyone else.
 				</p>
 			</div>	
-			
-			<div class="topic">
-				<h3>Why</h3><br>
-				<p class="reg_text">
-					Game design is how I kick back and enjoy the moment. I brew coffee, queue up whatever music I'm into that week, and go at it for hours. This project I'm especially passionate about and have been thinking of for over a year. <br>
-					<br>
-					I've taken this on as a solo project and am directly working on every aspect of the game from level design to UI/ UX to programming. However, I'm using this as an opportunity to connect with various developers skilled in various disciplines and better learn their processes. 
-				</p>
-			</div>
 			
 			<div class="topic">
 				<h3>Development</h3><br>
@@ -67,10 +58,17 @@ Portfolio-->
 					<br>
 					Additional Thanks:
 					<ul>
-						<li>Jan Stec - Lead Game Designer at Activision; consulted for input on character verbs and maintaining fairness in multiplayer setting.</li>
+						<li>Jan Stec - Lead Game Designer at Toys for Bob; consulted for input on character verbs and maintaining fairness in multiplayer setting.</li>
 						<li>Eric Wustrow - Professor at CU; consulted for help on HMAC model for verifying server integrity.</li>
 					</ul>
 				</div>
+			</div>
+			
+			<div class="topic">
+				<h3>Why</h3><br>
+				<p class="reg_text">
+					I've taken this on as a solo project and am directly working on every aspect of the game from level design to UI/ UX to programming. I'm using this as an opportunity to connect with various developers skilled in various disciplines and better learn their processes. Its a project I'm really excited about and have been thinking of for over a year.
+				</p>
 			</div>
 		</div>
 		
@@ -83,7 +81,7 @@ Portfolio-->
 				<h3>Seamap</h3><br>
 				<p class='reg_text'>
 					Here I've broken up various development goals over the span of a few months. <br>
-					Many of which are closed beta, meaning they have been developed and prototyped, but do not have an environment yet to be implemented. These are more of tools for later goals.
+					Some of which are closed beta, meaning they have been developed and prototyped, but yet to have an environment to be integrated in. These act as tools and abstractions for to-be-written systems.
 				</p>
 			</div>
 			<div class="topic">
@@ -91,12 +89,12 @@ Portfolio-->
 				<table class="roadmap">
 					<tr>
 						<td class="goal">NPC Network System
-							<p>Builds a graph of nodes which represent npcs, shifts nodes around map to simulate a day. Can then build a game map with scattered clues and npc permutations.</p>
+							<p>Builds a graph of nodes which represent npcs, shifts nodes around map in random. Can then build a game map with scattered npcs with different clues based on simulation.</p>
 						</td>
 						<td class="status">Closed Beta</td>
 					</tr>
 					<tr>
-						<td class="goal">Lua HMAC | Python HMAC Auth
+						<td class="goal">Lua & Python HMAC Auth
 							<p>Client-Server scripts to verify HTTP Requests made on behalf of Down Water.</p>
 						</td>
 						<td class="status">Closed Beta</td>
@@ -116,14 +114,14 @@ Portfolio-->
 					
 					<tr>
 						<td class="goal">Cross-Server Communication System
-							<p>System to communicate between servers on game state</p>
+							<p>System to communicate between servers on game state.</p>
 						</td>
 						<td class="status">Closed Beta</td>
 					</tr>
 					
 					<tr>
 						<td class="goal">Player Data and Statistics
-							<p>Script to manage player data and materials. Will link with endpoints</p>
+							<p>Script to manage player data and materials. Will later link with endpoints for saving/loading.</p>
 						</td>
 						<td class="status">On Track</td>
 					</tr>

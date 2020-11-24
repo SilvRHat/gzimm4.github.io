@@ -5,11 +5,13 @@ Portfolio and About Me
 <!DOCTYPE html>
 <html>
 <head>
-	<title>PORTFOLIO - Padding Oracle</title>
-	<link rel="stylesheet" href="../../Resources/style3.css">
+	<title>Padding Oracle</title>
+	<link rel="stylesheet" href="../../Resources/style4.css">
 	<link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet'>
+	<script src="../../Resources/webcode.js"></script>
 </head>
 <body>
+	<div id="backdrop"></div>
 	<div class="top">
 		<div class="topnav">
 			<div class="buttons">
@@ -24,16 +26,15 @@ Portfolio and About Me
 	<h5 style="
 	margin-left: 12.5%;
 	top:6vw;
-	position: relative;">Padding Oracle Automation</h5>
+	position: relative;">Padding Oracle Automator</h5>
 	
 	<div class="main_content" style="
-	top: 6vw;
-	position: relative;">  
+	margin-top: 6vw;">  
 		<div>
 			<div class="subbar">
-				<a id="about_button" class="subactive">About</a>
-				<a id="perf_button">Performance</a>
-				<a id="code_button">Source Code</a>
+				<a id="about_b" class="subactive">About</a>
+				<a id="perf_b">Performance</a>
+				<a id="code_b">Source Code</a>
 				<a href="../" style="float: right;">Back</a>
 			</div>
 			<div id="subfade"></div>
@@ -44,21 +45,21 @@ Portfolio and About Me
 				<h4>MAY 2020 - JUN 2020<br> Python | pycurl</h4>
 				<h3>Exposition</h3><br>
 				<p class="reg_desc">
-					The padding oracle attack is an attack vector which exploits a vulnerability in Cipher Block Chaining mode. It is able to decrypt entire messages without the encryption key. I designed this program to complete the Encrypted Pastebin CTF on Hacker101.
+					The padding oracle allows an attack vector which exploits a vulnerability in Cipher Block Chaining mode. It is able to decrypt entire messages without the encryption key. I designed this program to complete the Encrypted Pastebin CTF on Hacker101.
 					<br><br>
-					The CTF is ranked (Hard) and has 4 flags.
+					The CTF is ranked (Hard) and has 4 flags increasing in difficulty.
 				</p>
 			</div>
 			
 			<div class="topic" style="margin-top:0;">
 				<h3>CTF Report</h3><br>
 				<p class="reg_desc">
-					After going through the problem in its entirety, I came to the following conclusions on how the website operated and where it was vulnerable:
+					Here is my report and my conclusions on the CTF. I explain here on what I learned about the website and where it was vulnerable. (spoilers)
 					<br><br>
-					The website allows a user to make a post with a title and body. This post is then stored in a SQL database with the body encrypted using AES-128 CBC mode with a random key and IV. The key and SQL Row-id are then placed in a JSON string which is encrypted in AES-128 CBC mode with a random IV and constant key only the server knows. <br><br>
-					This string is used as a query to the website. The website then decrypts this input and uses the key and id elements to display the users post. Only valid padding encryptions are accepted, but no message authentication is ever made.<br><br>
-					A padding oracle attack may be used on the encrypted query. It is also possible to manipulate this data to change the key or post id (as long as its encrypted right). The post id is never sanitized which allows SQL injection attacks to be made.<br><br>
-					After examining the SQL database, there is another table with web-tracking data that contains headers of its visits. Retrieving this data will allow an attacker to see queries of posts they do not own.
+					The website allows a user to make a post with a title and body. This post is then stored in a SQL database. The body is encrypted with AES-128 CBC mode given a random key and IV, before being stored. The key and SQL row-id are then placed in a JSON string which is encrypted in AES-128 CBC mode with a random IV and secret constant key. <br><br>
+					This string (in base64) is used as a query to the website. The website then decrypts this input and uses the key and id json elements to display the users post. Only valid padding encryptions are accepted, but no message authentication is ever made.<br><br>
+					A padding oracle attack may be used on the encrypted query. It is also possible to manipulate this data to change the key or post id (as long as it has a valid encryption). The post id is never sanitized which allows SQL injection attacks to be made.<br><br>
+					After examining the SQL database, there is another table with web-tracking data that contains headers of its visits. Retrieving this data will allow an attacker to see url visits with queries of posts they do not own.
 				</p>
 			</div>
 			
@@ -95,11 +96,11 @@ Portfolio and About Me
 			</div>
 		</div>
 		
-		<div id="performance">
+		<div id="perf">
 			<div class="topic" style="margin-top:0;">
 				<h3>Setup</h3><br>
 				<p class="reg_desc">
-					Since this program was designed with a specific CTF in hand, this is configured to target a website which can validate padding. The code includes a number of configurations such as query parameter name, encoding/ decoding functions, and what errors to look for. All which can be modified to target a different setup. 
+					Since this program was designed with a specific CTF in hand, it is configured to target a website which can validate padding. The code includes a number of configurations such as query parameter name, encoding/ decoding functions, and what errors to look for. All which can be modified to target a different setup. 
 				</p>
 			</div>
 			
@@ -120,7 +121,7 @@ Portfolio and About Me
 				
 				<p class="reg_desc">
 					While working on this project I found that instead of testing bytes at random for padding validity; it was possible to use the last plaintext byte as a starting point.<br><br>
-					It makes sense in most situations, that english plaintext would have many bytes close in value (because ascii). So by xoring the last plain text byte with the desired padding value and the manipulation byte, you can first test bytes close in value to the last plaintext character.
+					It makes sense in most situations, that english plaintext would have many bytes close in value (because ascii). So by xoring the last plain text byte with the desired padding value and the manipulation byte, you can first test bytes which evaluate close to the last plaintext character.
 				</p>
 			</div>
 			
@@ -134,6 +135,7 @@ Portfolio and About Me
 					&nbsp;&nbsp;Avg. Network Requests: 5960<br> 
 					&nbsp;&nbsp;Avg. Response Time: 0.068 seconds<br> 
 					&nbsp;&nbsp;Avg. Requests per block: 596<br>
+					&nbsp;&nbsp;Avg. Requests per character: 37<br>
 					<br> 
 					&nbsp;&nbsp;Max Possible Requests: 40800<br> 
 				</div>
@@ -144,7 +146,7 @@ Portfolio and About Me
 			</div>
 		</div>
 		
-		<div id="source_code">
+		<div id="code">
 			<div class="topic" style="margin-top:0;">
 				<h3>Source Code</h3><br>
 				<p class="reg_desc">
@@ -176,33 +178,10 @@ Portfolio and About Me
 				</div>
 			</div>
 		</div>
-		
 	</div>
 	
 	<script type="text/javascript">
-		var topic_map = {"about_button":"about","perf_button":"performance", "code_button":"source_code"};
-		var current_button = document.getElementsByClassName("subactive")[0];
-		var current_topic = document.getElementsByClassName("viewing")[0];
-		
-		for (let button in topic_map) {
-			let topic = document.getElementById(topic_map[button]);
-			button = document.getElementById(button);
-			
-			if (topic!=current_topic) {
-				topic.style="visibility:hidden; position: fixed;";
-			};
-			button.onclick=(function (){
-				current_topic.style="visibility:hidden; position: fixed;";
-				current_button.classList.remove("subactive");
-				
-				current_topic=topic;
-				current_button=button;
-				
-				current_topic.style="";
-				current_button.classList.add("subactive");
-			})
-		};
-		
+		map(["about","code","perf"])
 	</script>
 </body>
 </html>

@@ -5,11 +5,13 @@ Portfolio and About Me
 <!DOCTYPE html>
 <html>
 <head>
-	<title>PORTFOLIO - Diced</title>
-	<link rel="stylesheet" href="../../Resources/style3.css">
+	<title>Diced</title>
+	<link rel="stylesheet" href="../../Resources/style4.css">
 	<link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet'>
+	<script src="../../Resources/webcode.js"></script>
 </head>
 <body>
+	<div id="backdrop"></div>
 	<div class="top">
 		<div class="topnav">
 			<div class="buttons">
@@ -27,12 +29,11 @@ Portfolio and About Me
 	position: relative;">Diced</h5>
 	
 	<div class="main_content" style="
-	top: 6vw;
-	position: relative;">  
+	margin-top: 6vw;">  
 		<div>
 			<div class="subbar">
-				<a id="about_button" class="subactive">About</a>
-				<a id="code_button">Code Samples</a>
+				<a id="about_b" class="subactive">About</a>
+				<a id="code_b">Code Samples</a>
 				<a href="../" style="float: right;">Back</a>
 			</div>
 			<div id="subfade"></div>
@@ -55,8 +56,8 @@ Portfolio and About Me
 				<h3>Development</h3><br>
 				<p class="reg_desc">
 					Plated Studios (Startup)<br>
-					&nbsp;&nbsp;Loertis - Lead game designer / Map creation / UI design<br>
-					&nbsp;&nbsp;Gavin Z. - Systems and gameplay programming / Animation<br>
+					&nbsp;&nbsp;Loertis - Map creation / UI design<br>
+					&nbsp;&nbsp;Gavin Z. - Gameplay programming / Animation<br>
 					<br>
 					Alpha Release: Published July 10th 2020<br>
 					Plays: +1000
@@ -64,60 +65,55 @@ Portfolio and About Me
 			</div>
 		</div>
 		
-		<div id="source_code">
+		<div id="code">
 			<div class="topic" style="margin-top:0;">
 				<h3>Environment</h3>
 				<br>
 				<p class="reg_desc">
 					All source code is written in Lua on Roblox’s Platform. <br>
-					Scripts are placed in a world hierarchy tree which contains all objects used to build the game. Scripts can be run either on client or server with differing permissions, and use remote signals to communicate over network traffic. Programmed completely in the context of Roblox objects and corresponding <a href="https://developer.roblox.com/en-us/api-reference">API</a> methods.
+					Scripts are placed in a world hierarchy tree which is used to build the game enivornment. They may be be run either on client or server with differing permissions. Programmed completely in the context of Roblox classes and corresponding <a href="https://developer.roblox.com/en-us/api-reference">API</a> methods.
 				</p>
 			</div>
 			
 			<div class="topic" style="margin-top:0;">
 				<h3>Structure</h3><br>
 				<p class="reg_desc">
-					Provided are significant scripts which directly guide gameplay. Client scripts typically monitor user input, provide immediate feedback, and signal server to validate and carry out completely. Server scripts are split into various roles and communicate data through signaled functions.
+					Provided are descriptions on scripts which directly guide gameplay. <br>
+					Client-sided scripts typically monitor user input, provide immediate feedback, and signal server to validate and carry out those actions.<br>
+					Server-sided scripts are take on various roles and communicate data through signaled functions.
 				</p>
 				<div class="code_block">
-					Main [SERVER SIDED]<br>
+					Main [SERVER]<br><br>
 					Operates gameplay cycle and game state. Cycles through setup, intermission, game round, round results and rewards.<br>
-					 &nbsp;&nbsp;Setup - Selects map and recipe module to play. Loads these into world.<br>
-					 &nbsp;&nbsp;Intermission - Brief sleep to introduce round conditions to players<br>
-					 &nbsp;&nbsp;Game round - Activates gameplay scripts and movement. Waits for all submissions or round time to reach 0. Deactivates gameplay scripts and movement.<br>
-					 &nbsp;&nbsp;Rewards - Scores each submission. Teleports losing player to lobby server. Rewards points to submissions and a bonus to winner.<br>
-					 <br>
-					 Linked with: UI_main, Store<br>
-					 <br><br>
+					Also manages endpoints to other server scripts to handle purchasable content which affects round setup (Ex. Choose Recipe Product).
+					<br><br><br>
 					 
-					Store [SERVER SIDED]<br>
+					Store [SERVER]<br><br>
 					Handles player data and product purchases. Enables player data to persist across game sessions. Enables a daily bonus rewarding extra points for consecutive days a player visits game. Manages upgrade purchases and purchasable content, verifying purchase are valid and fulfilled.<br>
-					<br>
-					Linked with: Main, UI_main<br>
-					<br><br>
+					<br><br><br>
 					
-					Recipe Module [MODULE | PARALLEL] (x12)<br>
-					Operates gameplay systems adjusted towards a specific recipe.
-					&nbsp;&nbsp;Client Side - Prompts player when interactions can be made. Sends signal to server on input 'E'. Some interactions require a key be pressed, where progress is displayed to user and communicated with server on early cancels.<br>
-					&nbsp;&nbsp;Server Side - Verifies and performs interactions, manipulating 3D environment in process. Communicates with Main, specifying most current scores and submission entries.
-					<br><br>
-					Required from: Main, UI_main
+					Recipe Module [MOD - SERVER]<br><br>
+					Operates gameplay systems adjusted towards a specific recipe. Verifies and performs interactions, manipulating 3D environment in process. Communicates with Main, tracking most current scores and submission entries.<br>
+					<br><br><br>
 					
-					Appearance [SERVER SIDED]<br>
+					Recipe Module [MOD - CLIENT]<br><br>
+					Operates gameplay systems adjusted towards a specific recipe. Prompts player when interactions can be made. Sends signal to server on input 'E'. Some interactions require a key be pressed, where progress is displayed to user and communicated with server on early cancels.<br>
+					<br><br><br>
+					
+					
+					Appearance [SERVER]<br><br>
 					Manages minor details in game appearance. Customizes characters in a chef avatar, designating premium players with red chat text and red clothing. <br>
-					<br><br>
+					<br><br><br>
 					
-					UI_main [CLIENT SIDED]<br>
-					Implements entire User interface. Signaled from main, UI main communicates game state with player, round details, and round results. Allows user to interact with a shop, a tutorial, and current selected recipe.<br>
-					<br>
-					Communicates with: Main, Store
+					UI_main [CLIENT]<br><br>
+					Implements entire user interface. Communicates game state with player, round details, and round results. Allows user to interact with a shop, a tutorial, and current selected recipe.<br>
 				</div>
 			</div>
 			
 			<div class="topic" style="margin-top:0;">
 				<h3>Source Code</h3><br>
 				<p class="reg_desc">
-					I've open-sourced some sample code from this project. I believe the scripts written show good programming practices and are a useful resource for intern applications. I also think they can be good to study for those interested in game making on Roblox.<br><br>
+					Only a portion of this project is open-sourced.<br><br>
 					Git Repo: <a href="https://github.com/gzimm4/Diced-Source-Code-Samples">Diced Code Samples</a><br>
 					Source: <a href="../../Resources/Code/Diced_Code_Samps.zip" download>Diced_Code_Samps.zip</a>
 				</p>
@@ -130,28 +126,7 @@ Portfolio and About Me
 	</div>
 	
 	<script type="text/javascript">
-		var topic_map = {"about_button":"about","code_button":"source_code"};
-		var current_button = document.getElementsByClassName("subactive")[0];
-		var current_topic = document.getElementsByClassName("viewing")[0];
-		
-		for (let button in topic_map) {
-			let topic = document.getElementById(topic_map[button]);
-			button = document.getElementById(button);
-			
-			if (topic!=current_topic) {
-				topic.style="visibility:hidden; position: fixed;";
-			};
-			button.onclick=(function (){
-				current_topic.style="visibility:hidden; position: fixed;";
-				current_button.classList.remove("subactive");
-				
-				current_topic=topic;
-				current_button=button;
-				
-				current_topic.style="";
-				current_button.classList.add("subactive");
-			})
-		};
+		map(["about","code"]);
 	</script>
 </body>
 </html>

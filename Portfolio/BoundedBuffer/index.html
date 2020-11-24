@@ -5,11 +5,13 @@ Portfolio and About Me
 <!DOCTYPE html>
 <html>
 <head>
-	<title>PORTFOLIO - Bounded Buffer</title>
-	<link rel="stylesheet" href="../../Resources/style3.css">
+	<title>Bounded Buffer</title>
+	<link rel="stylesheet" href="../../Resources/style4.css">
 	<link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet'>
+	<script src="../../Resources/webcode.js"></script>
 </head>
 <body>
+	<div id="backdrop"></div>
 	<div class="top">
 		<div class="topnav">
 			<div class="buttons">
@@ -27,12 +29,11 @@ Portfolio and About Me
 	position: relative;">Bounded Buffer</h5>
 	
 	<div class="main_content" style="
-	top: 6vw;
-	position: relative;">  
+	margin-top: 6vw;">  
 		<div>
 			<div class="subbar">
-				<a id="about_button" class="subactive">About</a>
-				<a id="code_button">Source Code</a>
+				<a id="about_b" class="subactive">About</a>
+				<a id="code_b">Source Code</a>
 				<a href="../" style="float: right;">Back</a>
 			</div>
 			<div id="subfade"></div>
@@ -44,7 +45,7 @@ Portfolio and About Me
 				
 				<h3>Exposition</h3><br>
 				<p class="reg_desc">
-					The bounded buffer problem faces managing shared memory between multiple threads in a safe manner. This project is a solution to project assignment 3 for Operating Systems at University of Colorado, Boulder.
+					The bounded buffer problem faces managing shared memory between multiple threads in a safe manner due to race conditions. This project is a solution to project assignment 3 for Operating Systems at University of Colorado, Boulder.
 				</p>
 			</div>
 			
@@ -97,7 +98,7 @@ Portfolio and About Me
 			</div>
 		</div>
 		
-		<div id="source_code">
+		<div id="code">
 			<div class="topic" style="margin-top:0;">
 				<h3>Source Code</h3><br>
 				<p class="reg_desc">
@@ -115,6 +116,7 @@ Portfolio and About Me
 				<div class="code_block" style="font-family: default;">
 					Gavin Zimmerman<br>
 					Project Assignment 3 - Multithreading<br>
+					10-24-2020<br>
 					<br>
 					Files<br>
 					multi-lookup.c  -  Main program source code. Main function is structured to set up environment to run program with dynamic input. Main then creates threads to service and resolve hostnames in given files.<br>
@@ -126,32 +128,10 @@ Portfolio and About Me
 			</div>
 		</div>
 	</div>
-	
 	<script type="text/javascript">
-		var topic_map = {"code_button":"source_code", "about_button":"about"};
-		var current_button = document.getElementsByClassName("subactive")[0];
-		var current_topic = document.getElementsByClassName("viewing")[0];
-		
-		for (let button in topic_map) {
-			let topic = document.getElementById(topic_map[button]);
-			button = document.getElementById(button);
-			
-			if (topic!=current_topic) {
-				topic.style="visibility:hidden; position: fixed;";
-			};
-			button.onclick=(function (){
-				current_topic.style="visibility:hidden; position: fixed;";
-				current_button.classList.remove("subactive");
-				
-				current_topic=topic;
-				current_button=button;
-				
-				current_topic.style="";
-				current_button.classList.add("subactive");
-			})
-		};
-		
+		map(["about","code"])
 	</script>
+	
 </body>
 </html>
 
