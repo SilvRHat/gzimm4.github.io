@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Page 1</title>
+</head>
+<body>
+	<div id = 'overlay'></div>
+	<p class='test' style='visibility: hidden;'> Secret</p>
+	<img class='norm page' style='visibility: hidden;' src='img.png'>
+	<img class='human page' style='visibility: hidden;' src='human.png'>
+	<img class='ghost page' style='visibility: hidden;' src='ghost.png'>
+	<img class='time page' style='visibility: hidden;' src='time.png'>
+	<link rel="stylesheet" href="style.css">
+	<a href='../Page1/index.html' rel="keep-params" id='prev'> </a>
+	<a href='../Page3/index.html' rel="keep-params" id='next'> </a>
+	<a href='?lens=human' class='norm' style='visibility: hidden;' id='humanlens'> </a>
+	<a href='?lens=ghost' class='norm' style='visibility: hidden;' id='ghostlens'> </a>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script>
+		// all <a> tags containing a certain rel=""
+		$("a[rel~='keep-params']").click(function(e) {
+		    e.preventDefault();
+
+		    var params = window.location.search,
+		        dest = $(this).attr('href') + params;
+
+		    // in my experience, a short timeout has helped overcome browser bugs
+		    window.setTimeout(function() {
+		        window.location.href = dest;
+		    }, 100);
+		});
+	</script>
+	<script type="text/javascript" src="../display.js"></script>
+</body>
+</html>
