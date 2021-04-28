@@ -74,6 +74,17 @@ body {
 	z-index:1;
 }
 
+.egg3 {
+	height: 120px;
+	width: 80px;
+	position: absolute;
+	display: block;
+	background-color: rgba(100,255,0,0);
+	top:60%;
+	left:38%;
+	z-index:1;
+}
+
 
 .page {
 	width: 80%;
