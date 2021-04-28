@@ -63,6 +63,17 @@ body {
 	margin:0%;
 }
 
+#egg2 {
+	height: 40px;
+	width: 100px;
+	position: absolute;
+	display: block;
+	background-color: rgba(100,255,0,0);
+	top:60%;
+	left:25%;
+	z-index:1;
+}
+
 
 .page {
 	width: 80%;
