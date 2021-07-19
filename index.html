@@ -1,100 +1,93 @@
-<!-- Gavin Zimmerman
-Portfolio and About Me 
--->
-
 <!DOCTYPE html>
 <html>
-<head>
-	<title>ABOUT</title>
-	<link rel="stylesheet" href="Resources/style4.css">
-	<link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet'>
-</head>
-<body>
-	<div id="backdrop"></div>
-	<div class="top">
-		<div class="topnav">
-			<div class="buttons">
-				<a class="active" href="">ABOUT ME</a>
-				<a href="Portfolio/">PORTFOLIO</a>
-				<!--<a href="Contact/">CONTACT</a>-->
-			</div>
-		</div>
-		<div id="navfade"></div>
-	</div>
-	<div class="title"> 
-		<h1>SilvRHat</h1>
-		<h2>Gameplay Programming and Design</h2>
-	</div>
-	<div class="main_content" style="margin-top: 46vw;">
-		<div class="topic">
-			<h3>About Me</h3>
-			<br>
-			<p class="reg_text" id="about_para">
-				Hey! I’m Gavin, a CS student at University of Colorado, Boulder and an avid game developer. I’m into all kinds of styles in music, animation, and art; and have found a passion in creating out of world experiences through game design. I specialize in programming, designing crazy gameplay cycles, character abilities, and making levels come to life. 
-				<br><br>
-				My newest project is Down Water, a multiplayer strategy game paired with an interactive steampunk-port-city scene. 
-				Feel free to reach out! I love talking game design, cyber security stories, music, and skiing.
-			</p>
-			
-		</div>
-		<div class="topic">
-			<h3>Skills</h3>
-			<br>
-			<p class="reg_text">Here are some of my favorite tools I’m proficient with and am proud to showcase. All of which I constantly use for coursework and my own ambitions. </p>
-			<div class="skills">
-				<div class="skills_div">
-					<p class="skills_box" id="skills_languages">
-						Lua, Python (3+ years)<br>
-						C, C++ (2-3 years)
-					</p><br>
-					<p class="skills_box" id="skills_tools">
-						[Python] - Scapy, pandas, NumPy<br>
-						[Linux]- OpenSSL, Git, cURL, GDB
-					</p>
-				</div>
-				<div class="skills_div">
-					<p class="skills_box" id="skills_software">
-						Blender - 3D modeling/ sculpting<br>
-						Unreal Engine 4 - Game dev.<br>
-						Roblox Studio - Game dev.<br>
-						WireShark - Network analysis<br>
-						Ableton - Synthesis/ composition<br>
-						Terminal - Misc. coding things
-					</p>
-				</div>
-			</div>
-		</div>
-		<div class="topic">
-			<h3>Background</h3>
-			<br>
-			<div class="background_item">
-				<p class="background_title">
-					Computer Science (Bachelor of Science) - University of Colorado, Boulder
-				</p>
-				<p class = "reg_desc">
-					Refining and expanding my computer science expertise here in beautiful Boulder. Currently maintaining a 3.56 technical GPA and 3.44 overal GPA. <br><br>
-					Squad Leader for the Golden Buffalo Marching Band, overseeing a small group of peers teaching/ guiding music rehearsals this fall.
-				</p>
-			</div>
-			<div class="background_item">
-				<p class="background_title">
-					Pentester - HackerOne
-				</p>
-				<p class = "reg_text">
-					Practicing cybersecurity with HackerOne’s program to build a strong understanding of code behaviour in a variety of contexts. Particularly interested in cryptography and native attack models.<br><br>
-					Completed CTFs: Micro-CMS v2 (Web), Encrypted Pastebin (Cryptography), Hello World! (Native), h@cktivityCon 2020
-				</p>
-			</div>
-		</div>
-		
-		<div class="topic">
-			<h3>Quest</h3><br>
-			<p class="reg_text">
-				My long-term quest is to one day be known for pushing the limits of what playable and non-playable characters can be in a video game world.<br><br>
-				Right now, I'm working hard to land an internship on my way to that goal. I'm hoping for a great opportunity to work with and learn from people of all kinds of backgrounds and specialties.
-			</p>
-		</div>
-	</div>
-	
-</body>
+    <head>
+        <title>ABOUT</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id='navbar'>
+            <a href='' id='gavinlink'>Gavin Zimmerman</a>
+            <div class='dropdowngroup'>
+                <a class='dropbutton' href='#games'>Games</a>
+                <div class='dropdown' id='games_dropdown'>
+                    <a href='Portfolio/LightStealer'>Light Stealer</a>
+                    <a href='Portfolio/Diced'>DICED</a>
+                </div>
+            </div>
+            
+            <div class='dropdowngroup'>
+                <a class='dropbutton' href='#characters'>Characters</a>
+                <div class='dropdown' id='characters_dropdown'>
+                    <a href='Portfolio/Noir'>Noir (In dev)</a>
+                    <a href='Portfolio/SP--dr/'>SP//dr (In dev)</a>
+                </div>
+            </div>
+        </div>
+        <div style="width: 100%; overflow: hidden; height: 360px; z-index: -100; position: relative;">
+            <img src='img/Background.png' style="width: 100%; position: relative; bottom: 25%; z-index: -100;">
+            <div class='title' style='text-shadow: 0px 0px 15px rgb(120 200 250 / 75%);'>
+                <h1>Gavin Zimmerman</h1>
+                <h2>Programming // Game Developer</h2>
+            </div>
+        </div>
+        <div id='content'>
+            <!--<h3>Showcase Reel //</h3>-->
+            <iframe id='ShowReel'  width="700" height="393.75" src="https://www.youtube.com/embed/UpvX9RPmAX4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <br><br>
+            <h2>Hello! //</h2>
+            <div style='margin-left: 24px;'>
+                <p>
+                    Hello! I’m Gavin, a developer specialized in programming and all about bringing characters to life through games.
+                    <br><br>
+                    I learned programming on Roblox when I was 12, and now develop games on the platform professionally. 
+                    Game dev is a path I’m new at, but one that challenges and excites me. 
+                    I’m currently taking on projects centered around characters and am looking to build connections and land a position in industry to learn from and develop with the best.
+                </p>
+            </div>
+            <br>
+
+            <h2>Mission //</h2>
+            <ul style='margin-left: 24px;'>
+                <li>Bring amazing characters to life with full style and personality</li>
+                <li>Break rules, standards, and physics for crazy fun experiences</li>
+                <li>Have fun with it and make it obvious</li>
+            </ul><br>
+
+            <h2 id='games'>Games // </h2>
+            <div class='wide_content'>
+                <a href='#'>
+                    <img class='gameimg' src="img/light-stealer-thumb.png">
+                </a>
+                <a href='#'>
+                    <img class='gameimg' src='https://t4.rbxcdn.com/ebfdc24e4d86a08d91833da1ffccfaa7'
+                    style='border-radius: 50%;'>
+                </a>
+            </div>
+            <br>
+
+            <h2 id='characters'>Characters //</h2>
+            <div class='wide_content'>
+                <a href='#'>
+                    <img class='charimg' src="img/noirsignature2.png">
+                </a>
+                <a href='#'>
+                    <img class='charimg' src='img/spider-game-logo-textured.png'>
+                </a>
+            </div>
+            <br>
+
+
+            <h2>Contact //</h2>
+            <p style='margin-left: 24px;'> Please feel free to get in touch with me at: </p>
+            <ul style='margin-left: 24px;'>
+                <li>gzimm4@gmail.com</li>
+                <li><a href='https://www.linkedin.com/in/gavinzimmerman/'>linkedin.com/in/gavinzimmerman/</a></li>
+            </ul>
+        </div>
+        
+
+        <div class='bottom' style="color: white;">
+            <p style="padding-top: 10px">Built on Github Pages<br>github.com/SilvRHat/gzimm4.github.io</p>
+        </div>
+    </body>
 </html>

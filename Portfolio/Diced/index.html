@@ -1,132 +1,107 @@
-<!-- Gavin Zimmerman
-Portfolio and About Me 
--->
-
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Diced</title>
-	<link rel="stylesheet" href="../../Resources/style4.css">
-	<link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet'>
-	<script src="../../Resources/webcode.js"></script>
-</head>
-<body>
-	<div id="backdrop"></div>
-	<div class="top">
-		<div class="topnav">
-			<div class="buttons">
-				<a href="../../">ABOUT ME</a>
-				<a class="active" href="../">PORTFOLIO</a>
-				<!--<a href="../../Contact">CONTACT</a>-->
-			</div>
-		</div>
-		<div id="navfade"></div>
-	</div>
-	
-	<h5 style="
-	margin-left: 12.5%;
-	top:6vw;
-	position: relative;">Diced</h5>
-	
-	<div class="main_content" style="
-	margin-top: 6vw;">  
-		<div>
-			<div class="subbar">
-				<a id="about_b" class="subactive">About</a>
-				<a id="code_b">Code Samples</a>
-				<a href="../" style="float: right;">Back</a>
-			</div>
-			<div id="subfade"></div>
-		</div>
-		
-		<div id="about" class="viewing">
-			<div class="topic" style="margin-top:0;">
-				<h4>MAR 2020 - JUL 2020<br> Lua | Roblox Studio & API</h4>
-				<h3>Game Description</h3><br>
-				
-				<p class="reg_desc">
-					A stylized pizza-making game where 4 players compete for the top score on constructing outrageous pizzas. Players battle in kitchens equipped with stand mixers, cutting boards, stovetops, and a grand pizza oven.  Every round a kitchen, theme, and recipe are chosen. Submissions are scored on dough ratios, correct toppings, cooking job, and hidden bonuses. Claiming wins, players can refine their knife skills, speed, and chef-know-how. 
-					<br><br>
-					Supported on: PC, Tablet, and Mobile<br>
-					Powered by Roblox
-				</p>
-			</div>
-			
-			<div class="topic" style="margin-top:0;">
-				<h3>Development</h3><br>
-				<p class="reg_desc">
-					Plated Studios (Startup)<br>
-					&nbsp;&nbsp;Loertis - Map creation / UI design<br>
-					&nbsp;&nbsp;SilvRHat. - Gameplay programming / Animation<br>
-					<br>
-					Alpha Release: Published July 10th 2020<br>
-					Plays: +1000
-				</p>
-			</div>
-		</div>
-		
-		<div id="code">
-			<div class="topic" style="margin-top:0;">
-				<h3>Environment</h3>
-				<br>
-				<p class="reg_desc">
-					All source code is written in Lua on Roblox’s Platform. <br>
-					Scripts are placed in a world hierarchy tree which is used to build the game enivornment. They may be be run either on client or server with differing permissions. Programmed completely in the context of Roblox classes and corresponding <a href="https://developer.roblox.com/en-us/api-reference">API</a> methods.
-				</p>
-			</div>
-			
-			<div class="topic" style="margin-top:0;">
-				<h3>Structure</h3><br>
-				<p class="reg_desc">
-					Provided are descriptions on scripts which directly guide gameplay. <br>
-					Client-sided scripts typically monitor user input, provide immediate feedback, and signal server to validate and carry out those actions.<br>
-					Server-sided scripts are take on various roles and communicate data through signaled functions.
-				</p>
-				<div class="code_block">
-					Main [SERVER]<br><br>
-					Operates gameplay cycle and game state. Cycles through setup, intermission, game round, round results and rewards.<br>
-					Also manages endpoints to other server scripts to handle purchasable content which affects round setup (Ex. Choose Recipe Product).
-					<br><br><br>
-					 
-					Store [SERVER]<br><br>
-					Handles player data and product purchases. Enables player data to persist across game sessions. Enables a daily bonus rewarding extra points for consecutive days a player visits game. Manages upgrade purchases and purchasable content, verifying purchase are valid and fulfilled.<br>
-					<br><br><br>
-					
-					Recipe Module [MOD - SERVER]<br><br>
-					Operates gameplay systems adjusted towards a specific recipe. Verifies and performs interactions, manipulating 3D environment in process. Communicates with Main, tracking most current scores and submission entries.<br>
-					<br><br><br>
-					
-					Recipe Module [MOD - CLIENT]<br><br>
-					Operates gameplay systems adjusted towards a specific recipe. Prompts player when interactions can be made. Sends signal to server on input 'E'. Some interactions require a key be pressed, where progress is displayed to user and communicated with server on early cancels.<br>
-					<br><br><br>
-					
-					
-					Appearance [SERVER]<br><br>
-					Manages minor details in game appearance. Customizes characters in a chef avatar, designating premium players with red chat text and red clothing. <br>
-					<br><br><br>
-					
-					UI_main [CLIENT]<br><br>
-					Implements entire user interface. Communicates game state with player, round details, and round results. Allows user to interact with a shop, a tutorial, and current selected recipe.<br>
-				</div>
-			</div>
-			
-			<div class="topic" style="margin-top:0;">
-				<h3>Source Code</h3><br>
-				<p class="reg_desc">
-					Only a portion of this project is open-sourced.<br><br>
-					Git Repo: <a href="https://github.com/gzimm4/Diced-Source-Code-Samples">Diced Code Samples</a><br>
-					Source: <a href="../../Resources/Code/Diced_Code_Samps.zip" download>Diced_Code_Samps.zip</a>
-				</p>
-				<div class="code_block">
-					git clone https://github.com/gzimm4/Diced-Source-Code-Samples
-				</div>
-			</div>
-		</div>
-		
-	</div>
-	
-	<script type="text/javascript">
-		map(["about","code"]);
-	</script>
-</body>
+    <head>
+        <title>DICED</title>
+        <link rel="stylesheet" href="../../style.css">
+        <link rel="stylesheet" href="noir.css">
+        </head>
+    <body>
+        <div id='navbar'>
+            <a href='../../' id='gavinlink'>Gavin Zimmerman</a>
+            <div class='dropdowngroup'>
+                <a class='dropbutton' href='#games'>Games</a>
+                <div class='dropdown' id='games_dropdown'>
+                    <a href='../LightStealer/'>Light Stealer</a>
+                    <a href='../Diced/'>DICED</a>
+                </div>
+            </div>
+            
+            <div class='dropdowngroup'>
+                <a class='dropbutton' href='#characters'>Characters</a>
+                <div class='dropdown' id='characters_dropdown'>
+                    <a href='../Noir/'>Noir (In dev)</a>
+                    <a href='../SP--dr/'>SP//dr (In dev)</a>
+                </div>
+            </div>
+        </div>
+        <div style="width: 100%; overflow: hidden; height: 360px; z-index: -100; position: relative;">
+            <img src='../../img/diced-pic1.png' style="width: 100%; position: relative; bottom: 60%; z-index: -100; filter: blur(2px);">
+            <div class='title' style='font-family:Verdana, Geneva, Tahoma, sans-serif; font-size: x-large; text-shadow: 0px 0px 15px rgb(236 117 117 / 75%);'>
+                <h1 font-weight: 300;>DICED</h1>
+                <h2 >Wacky Multiplayer Cooking Sim</h2>
+            </div>
+        </div>
+        <div class='smallcontent'>
+            <img src='https://t4.rbxcdn.com/ebfdc24e4d86a08d91833da1ffccfaa7' style = 'width: 150px;'>
+            <h3>
+                Diced
+            </h3>
+            <p>
+                A stylized pizza-making game where 4 players compete for the top score on constructing outrageous pizzas. Players battle in kitchens equipped with stand mixers, cutting boards, stovetops, and a grand pizza oven. Every round a kitchen, theme, and recipe are chosen. Submissions are scored on dough ratios, correct toppings, cooking job, and hidden bonuses. Claiming wins, players can refine their knife skills, speed, and chef-know-how.</p><br>
+            </p>
+            <div style='text-align: left; padding: 4px 20px;'>
+                <strong>Platforms:</strong> PC, Mobile, Tablet<br><br>
+                <strong>Developer:</strong> Plated Studio (On Roblox)<br><br>
+            </div>
+        </div>
+        <div class='content2'>
+            
+            <h2>Gameplay // </h2>
+            <div style='margin-left: 24px;'>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/7lbB1tfM91I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+            <br>
+            
+
+            <h2>Behind the Scenes //</h2>
+            <div style='margin-left: 24px;'>
+                <h3>Mechanics</h3>
+                <p>
+                    The game is dynamic in so many ways - from the recipes to the maps and ingredients.<br>
+                    Players start out in a lobby, where servers can accumulate up to 4 players which then leads into the main gameplay.
+                    Recipes and maps are choosen at random or by player-purchases. Rounds last 2.5 minutes where the player attempts to follow the given recipe as close as possible.
+                    Each recipe comes with its own set of hidden bonuses, easter eggs, and inspiration expanding on gameplay strategies.
+
+                </p>
+
+                <h3>Recipes</h3>
+                <p>There are 4 different origins which inspire each unqiue recipe.</p>
+                <ul>
+                    <li>Venice</li>
+                    <li>Margherita</li>
+                    <li>Italian</li>
+                    <li>Red Rocks</li>
+                    <li>Sweet n Spicy</li>
+                    <li>Flatirons</li>
+                    <li>Tropical</li>
+                    <li>Hawaiian</li>
+                    <li>[VIP] Mr. Penguins Pizza</li>
+                    <li>NY Classic</li>
+                    <li>NY Pepperoni</li>
+                    <li>NY Extra Large Cheese</li>
+                </ul>
+
+                <h3>Development</h3>
+                <p>
+                    Developed by Plated Studio on Roblox. The full team includes:
+                    <ul>
+                        <li>Myself (Scripting, Animation, 3D Assets)</li>
+                        <li>Loertis (UI, Art, Environment, Marketing, Direction)</li>
+                    </ul>
+                    Currently the game is no longer actively maintained - but occassionaly sees players.
+                </p>
+            </div>
+            <br>
+            <h2>Screenshots //</h2>
+        </div>
+        <div class='imggalley'>
+            <img src='../../img/diced-pic4.png'>
+            <img src='../../img/diced-pic2.png'>
+            <img src='../../img/diced-pic3.png'>
+            
+        </div>
+
+        <div class='bottom' style="color: white;">
+            <p style="padding-top: 10px">Built on Github Pages<br>github.com/SilvRHat/gzimm4.github.io</p>
+        </div>
+    </body>
 </html>

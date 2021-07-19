@@ -1,143 +1,86 @@
-<!--Gavin Zimmerman
-Portfolio-->
-
 <!DOCTYPE html>
 <html>
-<head>
-	<title>SP//dr</title>
-	
-	<!-- Resources -->
-	<link rel="stylesheet" href="../../Resources/style4.css">
-	<link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet'>
-	<script src="../../Resources/webcode.js"></script>
-</head>
-<body>
-	<div id="backdrop"></div>
-	<div class="top">
-		<div class="topnav">
-			<div class="buttons">
-				<a href="../../">ABOUT ME</a>
-				<a class="active" href="../">PORTFOLIO</a>
-				<!--<a href="../../Contact">CONTACT</a>-->
-			</div>
-		</div>
-		<div id="navfade"></div>
-	</div>
-	
-	<h5 style="
-	margin-left: 12.5%;
-	top:6vw;
-	position: relative;">Playable SP//dr Character</h5>
-	
-	<div class="main_content" style="
-	margin-top: 6vw;">
-		<div>
-			<div class="subbar">
-				<a id="about_b" class="subactive">About</a>
-				<!--<a id="design_b">Tech Design</a>-->
-				<a id="timeline_b">Timeline</a>
-				<a href="../" style="float: right;">Back</a>
-			</div>
-			<div id="subfade"></div>
-		</div>
-		
-		<div id="about" class="viewing">
-			<div class="topic">
-				<h4>NOV 2020</h4>
-				<h3>About</h3><br>
-				<p class="reg_text">
-					SP//dr is made up of three components: a pilot, radioactive spider, and mech suit. I want to recreate this character originally designed by Gerard Way in my own design as an experimental video game. Peni Parker and her spider both contribute in operating SP//dr, so I'm exploring the idea of having AI actively influence controls and user input in a way where the player does not feel restricted.
-				</p>
-			</div>	
-			
-			<div class="topic">
-				<h3>Development</h3><br>
-				<div class="reg_text">
-					Character<br>
-					Creator: Gerard Way and Jake Wyatt<br>
-					Publisher: Marvel Comics<br>
-					<br>
-					This project<br>
-					Developer: SilvrShip Studios<br>
-					<br>
-					Additional Thanks:
-					<ul>
-						<li>Zach Mullen - Professor at CU; consulted for guidance on AI.</li>
-					</ul>
-				</div>
-			</div>
-			
-			<div class="topic">
-				<h3>Why</h3><br>
-				<p class="reg_text">
-					I absolutely love the character Gerard Way came up with, which recently (2018) was featured in Into The Spider-Verse. And I want to be able to play them, so I took on this project.<br>
-					I saw potential to experiment with very unconventional methods of character controls featuring AI and weighted camera panning.<br><br>
-					Also I want to try and outdo insomniac games on their spiderman games, because they're great!
-				</p>
-			</div>
-		</div>
-		
-		<div id="design">
-			
-		</div>
-		
-		<div id="timeline">
-			<div class="topic">
-				<h3>Seamap</h3><br>
-			</div>
-			
-			<div class="topic">
-				<h3>November</h3>
-				<table class="roadmap">
-					
-					<tr>
-						<td class="goal"> Basic Controls
-							<p>Implements basic movement.</p>
-						</td>
-						<td class="status"> Live </td>
-					</tr>
-					
-					<tr>
-						<td class="goal"> Swing Script
-							<p>Implements spider-web swinging ability.</p>
-						</td>
-						<td class="status"> Beta Testing </td>
-					</tr>
-					
-				</table>
-			</div>
-			
-			<div class="topic">
-				<h3>December</h3>
-				<table class="roadmap">
-					<tr>
-						<td class="goal"> Camera Panning
-							<p>Handles custom camera-panning and will experiment with a weighted implementation to allow easier focus on swingable targets.</p>
-						</td>
-						<td class="status"> Concept Phase </td>
-					</tr>
-					
-					<tr>
-						<td class="goal"> Character Rigging and Inverse Kinematics
-							<p>Implement controls with character rig.</p>
-						</td>
-						<td class="status"> Concept Phase </td>
-					</tr>
-					
-					<tr>
-						<td class="goal"> AI inclusion
-							<p>Implement AI to participate in character controls.</p>
-						</td>
-						<td class="status"> Concept Phase </td>
-					</tr>
-				</table>
-			</div>
-			
-		</div>
-		
-	</div>
-	<script type="text/javascript">
-		map(["about","timeline"])
-	</script>
-</body>
+    <head>
+        <title>SP//DR</title>
+        <link rel="stylesheet" href="../../style.css">
+        <link rel="stylesheet" href="noir.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet"> </head>
+    <body>
+        <div id='navbar'>
+            <a href='../../' id='gavinlink'>Gavin Zimmerman</a>
+            <div class='dropdowngroup'>
+                <a class='dropbutton' href='#games'>Games</a>
+                <div class='dropdown' id='games_dropdown'>
+                    <a href='../LightStealer/'>Light Stealer</a>
+                    <a href='../Diced/'>DICED</a>
+                </div>
+            </div>
+            
+            <div class='dropdowngroup'>
+                <a class='dropbutton' href='#characters'>Characters</a>
+                <div class='dropdown' id='characters_dropdown'>
+                    <a href='../Noir/'>Noir (In dev)</a>
+                    <a href='../SP--dr/'>SP//dr (In dev)</a>
+                </div>
+            </div>
+        </div>
+        <div style="width: 100%; overflow: hidden; height: 360px; z-index: -100; position: relative;">
+            <img src='../../img/sp--dr-pic1.png' style="width: 100%; position: relative; bottom: 40%; z-index: -100; filter: blur(2px);">
+            <div class='title' style="font-family: 'Source Code Pro', monospace; font-size: x-large; text-shadow: 0px 0px 15px rgb(255, 128, 128);">
+                <h1>SP//dr</h1>
+                <h2>Very cool Spiderman</h2>
+            </div>
+        </div>
+        <div class='smallcontent'>
+            <img src='../../img/spider-game-logo.png'>
+            <h3>
+                SP//dr
+            </h3>
+            <p>
+                SP//dr is the Spiderman from Earth - 14512, designed by Gerard Way and featured in Spider-Man: Into the Spider-Verse.
+                The character greatly resonated with me and I not only wanted to program an amazing web swinging game,
+                but bring the pilot-mech-spider trio to life with a game showcasing its unique style and perspective.
+                This is a personal, nonprofit, and fan-created project.
+            </p><br>
+            
+            <div style='text-align: left; padding: 4px 20px;'>
+                <strong>Developer:</strong> Gavin Zimmerman <br>(Developed under: SilvRHat)<br><br>
+                <strong>Projected Release:</strong> January 2022<br><br>
+                <strong>Status:</strong> Early Development <br><br>
+                <strong>Platforms:</strong> PC Currently<br><br>
+                <!--
+                    <strong>Codebase:</strong> <a href = 'https://github.com/SilvRHat/SP--dr'>Github</a><br><br>
+                -->
+                
+            </div>
+        </div>
+        <div class='content2'>
+            <h2>Stylized Webbing Demo // </h2>
+            <div style='margin-left: 24px;'>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/AUWrs5MZWcw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+            <br>
+
+            <h2>Behind the Scenes //</h2>
+            <div style='margin-left: 24px;'>
+                <h3>Webbing Physics</h3>
+                <p>
+                    For the spider-webbing feature it needed to be exaggerated like a true spiderman comic. Thus I designed some clever tricks
+                    to implement something rope-like but without any hard constaints or Inverse Kinematics. I've put up an article explaining my process.
+                </p>
+                <ul>
+                    <li><a href='../../Articles/WebSwinging.html'>Stylized Webbing/ Rope Physics</a> </li>
+                </ul>
+            </div>
+            <br>
+            
+            
+        </div>
+        
+
+        <div class='bottom' style="color: white;">
+            <p style="padding-top: 10px">Built on Github Pages<br>github.com/SilvRHat/gzimm4.github.io</p>
+        </div>
+    </body>
 </html>

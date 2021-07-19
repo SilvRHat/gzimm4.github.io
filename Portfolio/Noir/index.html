@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>NOIR</title>
+        <link rel="stylesheet" href="../../style.css">
+        <link rel="stylesheet" href="noir.css">
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Amatic+SC" />
+    </head>
+    <body>
+        <div id='navbar'>
+            <a href='../../' id='gavinlink'>Gavin Zimmerman</a>
+            <div class='dropdowngroup'>
+                <a class='dropbutton' href='#games'>Games</a>
+                <div class='dropdown' id='games_dropdown'>
+                    <a href='../LightStealer/'>Light Stealer</a>
+                    <a href='../Diced/'>DICED</a>
+                </div>
+            </div>
+            
+            <div class='dropdowngroup'>
+                <a class='dropbutton' href='#characters'>Characters</a>
+                <div class='dropdown' id='characters_dropdown'>
+                    <a href='../Noir/'>Noir (In dev)</a>
+                    <a href='../SP--dr/'>SP//dr (In dev)</a>
+                </div>
+            </div>
+        </div>
+        <div style="width: 100%; overflow: hidden; height: 360px; z-index: -100; position: relative;">
+            <img src='../../img/noir-pic1.png' style="width: 100%; position: relative; bottom: 20%; z-index: -100; filter: blur(2px);">
+            <div class='title' style='font-family: "Amatic SC"; font-size: x-large; text-shadow: 0px 0px 15px rgb(19, 70, 112);'>
+                <img src='../../img/noirsignature.png' height=180px style='position: relative; left: 40px; top:-30px'>
+                <h2 >Agile & Fun Ghost</h2>
+            </div>
+        </div>
+        <div class='smallcontent'>
+            <img src='../../img/noirsignature2.png'>
+            <h3>
+                Noir
+            </h3>
+            <p>
+                Noir's a ghost and adventurer by nature - always tinkering with robots and surfing atop airships.
+                I'm excited to bring Noir's character a loose-story game built around her repitoire of highly agile/ mobile abilities.
+                
+            </p><br>
+            
+            <div style='text-align: left; padding: 4px 20px;'>
+                <strong>Game:</strong>  <a href = 'https://www.roblox.com/games/6910654945/Light-Stealer'>Check it here on roblox</a><br><br>
+                <strong>Developer:</strong> Gavin Zimmerman <br>(Developed under: SilvRHat)<br><br>
+                <strong>Projected Release:</strong> October 2021<br><br>
+                <strong>Status:</strong> Early Development <br><br>
+                <strong>Platforms:</strong> PC Currently<br><br>
+                <strong>Mode: Multiplayer / Solo</strong><br><br>
+                <strong>Codebase:</strong> <a href = 'https://github.com/SilvRHat/Noir'>Github</a><br><br>
+                
+                
+            </div>
+        </div>
+        <div class='content2'>
+            <h2>Character Controller Demo // </h2>
+            <div style='margin-left: 24px;'>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/-BWKzk4RtUI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <br>
+
+            <h2>Behind the Scenes //</h2>
+            <div style='margin-left: 24px;'>
+                <h3>Controls & Movement</h3>
+                <p>
+                    The character verbs I've designed for Noir allow her to fly, hover (walk) on walls, jump and slide, step back in time, sprint, and various chimera states of those.
+                    So, it is not ideal to use Roblox's default Camera or Character controller.<br><br>
+                    What is shown in the video above is the implementation of a custom character controller which is non-physics based.
+                    Instead each nearby surface is surveyed and compared to the last selected surface, and camera and directional input. 
+                    A spring allows the player to hover at a certain height (lowered when sprinting).
+                    <br><br>
+                    Currently in implementation, the flying mode will be active when that distance is greater than (~20 units).
+                    While any distance from the best surface under that gives a blended mode of hovering and flying (using a sigmoid).
+                    <br><br>
+                    Inputs are fed into a flying controller and hovering controller which then add velocities to work with Roblox's existing phyiscs engine.
+                    <br><br>
+                    This results in a smooth change of movement style- where jumping acts as a kickstart to flying.
+                </p>
+            </div>
+            <br>
+            <h2>Concept Art //</h2>
+            
+        </div>
+        <div class='imggalley'>
+            <h5>Flying / Hovering / Sprinting / Falling <br> Concept art & Notes</h5>
+            <img src='../../img/noir-concept1.jpg' style='filter: brightness(1.2) contrast(1.2); max-width: 1200px;'>
+        </div>
+
+        <div class='bottom' style="color: white;">
+            <p style="padding-top: 10px">Built on Github Pages<br>github.com/SilvRHat/gzimm4.github.io</p>
+        </div>
+    </body>
+</html>
